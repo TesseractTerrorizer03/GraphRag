@@ -6,7 +6,7 @@ export PYTHONPATH = src
 check_dirs := examples tests src utils
 VENV_DIR := .venv
 VENV_PY := $(VENV_DIR)/bin/python
-UV := /usr/bin/uv
+UV := uv
 
 # Create venv with access to system packages (from stage 0 container)
 $(VENV_DIR)/bin/activate:
