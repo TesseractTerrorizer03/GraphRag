@@ -4,7 +4,7 @@
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "torch.dev.gpu",
+	"service": "torch.dev.cpu",
 	"workspaceFolder": "/workspaces/eng-ai-agents",
 	"remoteUser": "vscode",
 	"postCreateCommand": "bash -c 'if [ -d \".venv\" ]; then source .venv/bin/activate && echo \"Dev container setup complete! Python available at: $(which python)\" && echo \"UV version: $(uv --version)\"; else echo \"Virtual environment not found. Please run: make start and source your environment\"; fi'",
