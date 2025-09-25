@@ -1,17 +1,17 @@
 services:
-  torch.dev.gpu:
+  torch.dev.mac: 
     build:
       context: .
-      dockerfile: docker/Dockerfile.torch.dev.gpu
+      dockerfile: docker/Dockerfile.torch.mac.dev # <-- Mac Dockerfile
       args:
         UV_EXTRA: ${UV_EXTRA:-cpu}
         WORKSPACE_DIR: ${WORKSPACE_DIR:-/workspaces/eng-ai-agents}
         WORKSPACE_USER: ${WORKSPACE_USER:-vscode}
-    container_name: eng-ai-agents-dev
+    container_name: eng-ai-agents-dev-mac
     ports:
-      - "${DEV_QUARTO_PORT:-4100}:4100"  # Quarto preview port
-      - "${DEV_JUPYTER_PORT:-8888}:8888"  # Jupyter notebook port
-      - "${DEV_PORT:-8000}:8000"  # Additional development port
+      - "${DEV_QUARTO_PORT:-4100}:4100"
+      - "${DEV_JUPYTER_PORT:-8888}:8888"
+      - "${DEV_PORT:-8000}:8000"
     volumes:
       - .:${WORKSPACE_DIR:-/workspaces/eng-ai-agents}
     working_dir: ${WORKSPACE_DIR:-/workspaces/eng-ai-agents}
@@ -27,16 +27,12 @@ services:
     command:  bash -c "tail -f /dev/null"
     stdin_open: true
     tty: true
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     networks:
       - ai-agents-network
-  ros.dev.gpu: 
+
+
+  ros.dev.gpu:
+    platform: linux/amd64 
     build:
       context: .
       dockerfile: docker/Dockerfile.ros.dev.gpu
@@ -47,18 +43,14 @@ services:
         ROS_DISTRO: ${ROS_DISTRO:-jazzy}
     container_name: eng-ai-agents-ros
     ports:
-      - "${ROS_PORT:-11311}:11311"  # ROS master port
-      - "${ROS_QUARTO_PORT:-4180}:4100"  # Quarto preview port
-      - "${ROS_JUPYTER_PORT:-8880}:8888"  # Jupyter notebook port
-      - "${ROS_DEV_PORT:-8078}:8000"  # Additional development port
-      - "${FOXGLOVE_PORT:-8765}:8765"  # Additional development port
+      - "${ROS_PORT:-11311}:11311"
+      - "${ROS_QUARTO_PORT:-4180}:4100"
+      - "${ROS_JUPYTER_PORT:-8880}:8888"
+      - "${ROS_DEV_PORT:-8078}:8000"
+      - "${FOXGLOVE_PORT:-8765}:8765"
     volumes:
       - .:${WORKSPACE_DIR:-/workspaces/eng-ai-agents}
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-     # - /dev/bus/usb:/dev/bus/usb            # --device=/dev/bus/usb:/dev/bus/usb
-    devices:
-       - /dev/bus/usb/:/dev/bus/usb/
-       - /dev/input/:/dev/input/
     working_dir: ${WORKSPACE_DIR:-/workspaces/eng-ai-agents}
     environment:
       - PATH=${WORKSPACE_DIR:-/workspaces/eng-ai-agents}/.venv/bin:$PATH
@@ -84,29 +76,8 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     networks:
       - ai-agents-network
-  # ##########
-  # # Vector Database
-  # ##########
-  # qdrant:
-  #   image: qdrant/qdrant:latest
-  #   ports:
-  #     - "6333:6333"
-  #     - "6334:6334"
-  #   volumes:
-  #     - ./qdrant_storage:/qdrant/storage:z
-  #   environment:
-  #     - IMAGE_DIR=/qdrant/images  # Optional: Configure the directory in Qdrant if needed
-  #   networks:
-  #     -  ai-agents-network
 
 networks:
   ai-agents-network:
