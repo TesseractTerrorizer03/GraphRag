@@ -133,4 +133,5 @@ start:
 	$(MAKE) venv-recreate
 	$(MAKE) deps-sync
 	$(MAKE) install
+	. $(VENV_DIR)/bin/activate && $(UV) pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 	@echo "To activate the virtual environment, run: source .venv/bin/activate"
