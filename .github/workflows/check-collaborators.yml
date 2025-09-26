@@ -31,7 +31,7 @@ jobs:
           RESET = '\033[0m'
 
           # List of GitHub users to check
-          users_to_check = ['Kamil-Arif', 'iiisoowzd', 'fatemehramezanii']  # Replace with actual usernames
+          users_to_check = ['lord-fourth0107', 'kushagrayadv']  # Replace with actual usernames
 
           action_result = 0
 
