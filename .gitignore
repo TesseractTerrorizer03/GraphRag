@@ -174,6 +174,7 @@ datafiles/
 runs/
 
 *.pth
+*.pt
 .ipynb_checkpoints
 
 *.tar.xz
