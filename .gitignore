@@ -186,4 +186,4 @@ install/
 log/
 .colcon/
 
-assignments/assignment-3/deep_sort/
+assignments/assignment-3/deep_sort/*.pt
