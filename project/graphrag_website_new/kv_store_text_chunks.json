@@ -1,0 +1,758 @@
+{
+  "chunk-b51c9e3439fc588a037c55333c86c6cf": {
+    "tokens": 131,
+    "content": "to minimize these dot products (denominator of the loss); terms for which \\(i == j\\) are the positive pairs and we seek to maximize these dot product (they appear in both the numerator and denominator of the loss). Figure 3: CLIP training for one batch of six language-image training examples. Green boxes are positive pairings (we seek to increase their value); these are the six training pairs. Red boxes are negative pairings (we seek to decrease their value); these are all other possible pairings within the batch. Inspired by figure 1 of \\cite{radford2021learning After training, we have a text encoder",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b51c9e3439fc588a037c55333c86c6cf"
+  },
+  "chunk-310ab00a0326f7416d49d21a8ef696ea": {
+    "tokens": 127,
+    "content": "> <effect >) Action They can have costs, duration, time constraints etc. Defining the Problem Now, let define in the file problem.pddl a simple problem and its components : the objects, the initial state, the goal to reach. First, we have to define the name of the problem and indicate the domain associated with this problem: In PDDL, we write : (define (problem p01) (:domain logistics) Objects In this example, we use the following objects: A Truck : truck An airplane: airplane Two airports : cdg , lhr Two places : north , south Two cities : london , paris",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-310ab00a0326f7416d49d21a8ef696ea"
+  },
+  "chunk-023c8b67da94a3b9edf077fa3025ccbf": {
+    "tokens": 153,
+    "content": "Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language Models RNN Language Models Example of an RNN Language Model RNN-based Neural Machine Translation Character-level recurrent sequence-to-sequence model The BLEU Score Attention in RNN-based NMT Transformers and Self-Attention Single-head self-attention Multi-head self-attention Multilayer Perceptron (MLP) Positional Embeddings LLM Inference On this page Multi-head self-attention Attention Blocks with Skip Connections Edit this page View source Report an issue Large Language Models Multi-head self-attention Multi-head self-attention Earlier we have seen examples with the token bear being in multiple grammatical patterns that also",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-023c8b67da94a3b9edf077fa3025ccbf"
+  },
+  "chunk-32e51673be16864652dbab8fc07a061e": {
+    "tokens": 150,
+    "content": "the embedding dimension. \\(Q, K, V\\) are the query, keys and values respectively and the dimensions of the \\(W^q, W^k, W^v\\) matrices are \\(d \\times d_q, d \\times d_k, d \\times d_v\\) respectively. Queries and keys occupy typically the same dimensional space ( \\(d_k\\) ). Each token is undertaking three roles, lets focus here on the first two: In a query role the current token effectively seeks to find other functions eg ‘adjective’ In a key role the current token effectively expresses its own function eg ‘noun’. For example: ‘I am key=noun’ and I am seeking for a earlier query=adjective’.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-32e51673be16864652dbab8fc07a061e"
+  },
+  "chunk-950dc1d081d33e9d6137fed2a025ba82": {
+    "tokens": 214,
+    "content": "-\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)} + \\log p(\\mathbf x) \\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\] \\[= -\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)} + \\log p(\\mathbf x)\\] \\[⇒\\log p(\\mathbf x) = KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) + \\underbrace{\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-950dc1d081d33e9d6137fed2a025ba82"
+  },
+  "chunk-bd1c71693bdfe626d9c451ad943853a8": {
+    "tokens": 316,
+    "content": "& x_{1,3} & x_{1,4} & x_{1,5} & x_{1,6} & x_{1,7} & x_{1,8} \\\\ x_{2,1} & x_{2,2} & x_{2,3} & x_{2,4} & x_{2,5} & x_{2,6} & x_{2,7} & x_{2,8} \\\\ \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots \\\\ x_{16,1} & x_{16,2} & x_{16,3} & x_{16,4} & x_{16,5} & x_{16,6} & x_{16,7} & x_{16,8} \\end{bmatrix} \\] \\[ W^{(q)} = \\begin{bmatrix} w_{1,1} & w_{1,2} & w_{1,3} & w_{1,4} \\\\ w_{2,1} & w_{2,2} & w_{2,3} & w_{2,4} \\\\ \\vdots & \\vdots & \\vdots & \\vdots \\\\ w_{8,1} & w_{8,2} & w_{8,3} & w_{8,4} \\end{bmatrix} \\] The",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-bd1c71693bdfe626d9c451ad943853a8"
+  },
+  "chunk-fb08b0cb43ddd68fca0f52bd8655e5f9": {
+    "tokens": 133,
+    "content": "?@sec-neural_nets_as_distribution_transformers . To reduce dimensionality we apply t-SNE ( tsne? ) separately for the text encoder and the image encoder. Within each encoder, we run t-SNE jointly across all shown layers. After passing the data through these two encoders, the final stage is to normalize the outputs and compute the alignment between the image and text embeddings. Figure 5 shows this last step. After normalization, all the embeddings line on the surface of a hypersphere (the circle in the figure). Notice that the text descriptions are embedded near the image embeddings (icons) that match that description. It’s not perfect but",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-fb08b0cb43ddd68fca0f52bd8655e5f9"
+  },
+  "chunk-be229ae7504ea8f594bf6e53f76651e7": {
+    "tokens": 118,
+    "content": "via its perception system. The agent must be able to distinguish a situation where the backpack that was left behind by its carrier (a person) to a companion traveler (another person) to e.g. visit the restroom from the situation where the backpack was left behind maliciously. Unique object IDs must be assigned (symbolic segmentation) to persons and a very accurate scene graph must also be generated by its probabilistic reasoning system. It does not stop there as relational information must be generated to associate objects (e.g. carriers and pieces of luggage) and such information must be stored in the KB",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-be229ae7504ea8f594bf6e53f76651e7"
+  },
+  "chunk-9aa5274852e33eef66b22c14e3909ad5": {
+    "tokens": 117,
+    "content": "? We expect to see an explanation of the Jensen’s inequality, explanation of variational methods and how the variational autoencoder losses use the Jensen’s inequality. For all questions, after each answer is provided, include the nodes that are used from the knowledge graph as well as references to the resources that were used to generate the answer. For all questions, provide the system prompt you used. You cannot add anything to the question prompt above. Way to proceed Do not perfect each milestone. Get a basic version working and then iterate to improve. For example, for M3 you can start",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9aa5274852e33eef66b22c14e3909ad5"
+  },
+  "chunk-ff5da210619bba28764ae8ea88269a18": {
+    "tokens": 181,
+    "content": "\\[q(\\mathbf z| \\mathbf x ; \\mathbf \\phi) = N(\\mathbf z; \\mathbf \\mu, \\textsf{diag} \\mathbf \\Sigma) )\\] The \\(DNN_{enc}\\) implements amortized variational inference, that is, it estimates the posterior parameters over a batch of datapoints and this offers significant boost in the parameter learning. During the treatment of entropy, we have met the concept of relative entropy or KL divergence that measures the “distance” between two distributions referenced on one of them. \\[KL(q||p)= \\mathbb{E}[\\log q(\\mathbf x) - \\ln p(\\mathbf x)] = - \\sum_{\\mathbf x} q(\\mathbf x) \\log \\frac{p(\\mathbf x)}{q(\\mathbf x)}\\] We will use KL divergence to obtain a suitable loss function",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ff5da210619bba28764ae8ea88269a18"
+  },
+  "chunk-8918faedca791dce8442c2842ed51792": {
+    "tokens": 128,
+    "content": "Logistics Planning in PDDL – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Task Planning Logistics Planning in PDDL Task Planning Task Planning Planning Domain Definition Language (PDDL) The Unified Planning Library Logistics Planning in PDDL Manufacrturing Robot Planning in PDDL On this page Defining the Domain Requirements Types Predicates Operators Defining",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8918faedca791dce8442c2842ed51792"
+  },
+  "chunk-575b5e50472741efa7a02966c34ea787": {
+    "tokens": 120,
+    "content": "scene or two different imaging modalities, such as color and depth, and we will see more examples subsequently. Contrastive learning is actually more closely related to clustering than it may at first seem. Contrastive learning maps similar datapoints to similar embeddings. Clustering is just the extreme version of this where there are only \\(k\\) distinct embeddings and similar datapoints get mapped to the exact same embedding. Learning invariant representations is classic goal of computer vision. Recall that this was one of the reasons we used convolutional image filters: convolution is equivariant with camera translation, and invariance can then be achieved",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-575b5e50472741efa7a02966c34ea787"
+  },
+  "chunk-600ec77937d9b06cec73e834b54ef7a4": {
+    "tokens": 128,
+    "content": "Deep Neural Networks Training Deep Neural Networks Perception 2D Perception Recursive State Estimation State Estimation Large Language Models Large Language Models Logical Reasoning Automated Reasoning World Models Logical Inference Logical Agents Planning Task Planning Acting - Markov Decision Processes Markov Decision Processes Acting - Reinforcement Learning Reinforcement Learning Math Background Math for ML Textbook Probability Basics Linear Algebra for Machine Learning Calculus Resources Submitting Your Assignment / Project Your Programming Environment Learn Python Assignments Assignment 1 (undergrad) Assignment 1 (grad) Assignment 2 Assignment 3 Assignment 4 Project Introducing Erica - Your AI Tutor On this page System Architecture Project Milestones",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-600ec77937d9b06cec73e834b54ef7a4"
+  },
+  "chunk-de49685904c478fbf8cf8050f3485fb7": {
+    "tokens": 176,
+    "content": "are two datapoints that should be represented differently in \\(z\\) -space. Commonly, negative pairs are randomly constructed by sampling two datapoints independently and identically from the same data distribution, that is, \\(\\mathbf{x} \\sim p_{\\texttt{data}}(\\mathbf{x})\\) and \\(\\mathbf{x}^{-} \\sim p_{\\texttt{data}}(\\mathbf{x})\\) . Given such data pairings, the objective is to pull together the positive pairs and push apart the negative pairs, as illustrated in Figure 1 . Figure 1: Contrastive learning. This kind of contrastive learning results in an embedding that is invariant to a transformation \\(T\\) . Extending this to achieve invariance to a set of transformations \\(\\{T_1, \\ldots, T_n\\}\\) is straightforward:",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-de49685904c478fbf8cf8050f3485fb7"
+  },
+  "chunk-9691570c00acdd0fdc4be33481f76c10": {
+    "tokens": 145,
+    "content": "(viz_inputs.token_type_ids == 0 ). sum (dim = 1 ) tokens = tokenizer.convert_ids_to_tokens(viz_inputs.input_ids[ 0 ]) head_view(attention, tokens, sentence_b_start, heads = [ 8 ]) Figure 1: Links between the tokens in the input sequence. This visualization shows the attention weights as lines connecting the token whose embedding is getting updated (left) with every word that is being attended to (right). The intensity of the lines indicates the strength of the attention weights, with dark lines representing values close to 1, and faint lines representing values close to 0. The end result is that the token ‘flies’ will receive the context of ‘soars’",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9691570c00acdd0fdc4be33481f76c10"
+  },
+  "chunk-c99c24e98baaaa5f4dd12a27d70829e3": {
+    "tokens": 170,
+    "content": "is for example very small, this is purely due to the specific data being present at that moment. Example An example of the output of the scaled dot-product self-attention is shown below using the bertviz library. from bertviz import head_view from transformers import AutoModel model = AutoModel.from_pretrained(model_ckpt, output_attentions = True ) sentence_a = \"time flies like an arrow\" sentence_b = \"fruit flies like a banana\" viz_inputs = tokenizer(sentence_a, sentence_b, return_tensors = 'pt' ) attention = model( ** viz_inputs).attentions sentence_b_start = (viz_inputs.token_type_ids == 0 ). sum (dim = 1 ) tokens = tokenizer.convert_ids_to_tokens(viz_inputs.input_ids[ 0 ]) head_view(attention, tokens, sentence_b_start, heads = [",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c99c24e98baaaa5f4dd12a27d70829e3"
+  },
+  "chunk-c0d666dc2b38320dbc3e9ac039241910": {
+    "tokens": 159,
+    "content": "this issue by coupling an alignment loss with a second loss that pushes apart embeddings of datapoints for which we do not want an invariant representation. The supervision for contrastive learning comes in the form of positive pairs and negative pairs . Positive pairs are two datapoints we wish to align in \\(z\\) -space; if we wish for invariance to \\(T\\) then a positive pair should be constructed as \\(\\{\\mathbf{x}, \\mathbf{x}^{+}\\}\\) with \\(\\mathbf{x}^{+} = T(\\mathbf{x})\\) . Negative pairs, \\(\\{\\mathbf{x},\\mathbf{x}^-\\}\\) , are two datapoints that should be represented differently in \\(z\\) -space. Commonly, negative pairs are randomly constructed by sampling two",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c0d666dc2b38320dbc3e9ac039241910"
+  },
+  "chunk-a35a54936b57bd429c20424558b70ca3": {
+    "tokens": 121,
+    "content": "Introducing Erica - Your AI Tutor – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Project Introducing Erica - Your AI Tutor Introduction Syllabus Rules, rule the world AI Agents Foundations Foundations Deep Neural Networks Training Deep Neural Networks Perception 2D Perception Recursive State Estimation State Estimation Large Language Models Large Language",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a35a54936b57bd429c20424558b70ca3"
+  },
+  "chunk-124fbb1b8e31d8533b54ab785a1c693b": {
+    "tokens": 111,
+    "content": "an information bottleneck , that is, by constraining the number of bits available in the representation. An alternative compression strategy is to supervise what information should be thrown away. Contrastive learning is one such approach where a representation is supervised to be invariant to certain viewing transformations, resulting in a compressed representation that only captures the properties that are common between the different data views . Two different data views could correspond to two different cameras looking at the same scene or two different imaging modalities, such as color and depth, and we will see more examples subsequently. Contrastive learning",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-124fbb1b8e31d8533b54ab785a1c693b"
+  },
+  "chunk-086978ab1a823b35a328c5fd09b9549c": {
+    "tokens": 201,
+    "content": "shown below: VAE Architecture (from here ) Similar to the generative model, the inference model can be, in general, a PGM of the form: \\[q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) = \\prod_{j=1}^M q(\\mathbf z_j | Pa(\\mathbf z_j), \\mathbf x ; \\mathbf \\phi)\\] and this, similarly to the generative model, can be parametrized with a \\(DNN_{enc}(\\phi)\\) . More specifically we obtain the approximation using the following construction: \\[ (\\mathbf \\mu, \\log \\mathbf \\Sigma ) = DNN_{enc}(\\mathbf x, \\mathbf \\phi)\\] \\[q(\\mathbf z| \\mathbf x ; \\mathbf \\phi) = N(\\mathbf z; \\mathbf \\mu, \\textsf{diag} \\mathbf \\Sigma) )\\] The \\(DNN_{enc}\\) implements amortized",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-086978ab1a823b35a328c5fd09b9549c"
+  },
+  "chunk-eeaec62948278b91f26a03110001a710": {
+    "tokens": 118,
+    "content": "Logistics Planning in PDDL Manufacrturing Robot Planning in PDDL On this page Defining the Domain Requirements Types Predicates Operators Defining the Problem Objects Initial State Goal Description Edit this page View source Report an issue Task Planning Logistics Planning in PDDL Logistics Planning in PDDL We will use the Logistics domain to illustrate how to represent a planning task in PDDL. In logistics, there are trucks and airplanes that can move packages between different airports and cities. We assume that in the initial state there is a truck in Paris airport. An airplane and two packages are in London airport.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-eeaec62948278b91f26a03110001a710"
+  },
+  "chunk-01d17cfe5c23b5c3533930eea1c2f5b1": {
+    "tokens": 119,
+    "content": "vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What is CLIP and how it is used in computer vision applications ? We expect to see a response that explains encoders for text and image, the principle of contrastive loss, the dot product operation and how one-shot classification can be achieved with CLIP . Question 3: Can you explain the variational lower bound and how it relates to Jensen’s inequality ? We expect to see an explanation of the Jensen’s inequality, explanation of variational methods and how the variational autoencoder",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-01d17cfe5c23b5c3533930eea1c2f5b1"
+  },
+  "chunk-25040bd865916a874f3f1082e7ac1fab": {
+    "tokens": 111,
+    "content": "be generated to associate objects (e.g. carriers and pieces of luggage) and such information must be stored in the KB but perhaps more importantly the agent must be able to reason using the stored information in the KB. Securing the cloud - automated reasoning Logical reasoning is used not only for scene analytics. AWS was the first cloud provider to recognize its significance and the following video shows why and what they have developed in this space. To the best of our knowledge (minus military applications we don’t know) this is the largest deployment of logical reasoning technology to this",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-25040bd865916a874f3f1082e7ac1fab"
+  },
+  "chunk-fcaf73a46ba5dd7357de0848204c3c3f": {
+    "tokens": 134,
+    "content": "encoder, the early layers group images by color and the later layers group more by shape. The opposite is true for the text encoder. Why do you think this is? One reason may be that color is a superficial feature in pixel-space while shape requires processing to extract, but in text-space, color words and shape words are equally superficial and easy to group sentences by. Figure 4: CLIP ( radford2021learning? ) mapping diagram, using the same technique as described in ?@sec-neural_nets_as_distribution_transformers . To reduce dimensionality we apply t-SNE ( tsne? ) separately for the text encoder and the image encoder.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-fcaf73a46ba5dd7357de0848204c3c3f"
+  },
+  "chunk-9526da303b971a977195d19a3809b3ae": {
+    "tokens": 167,
+    "content": "meaning of such new coordinate system is not necessary to be explicitly defined but it helps understand what this projection may achieve. We define three such trainable matrices \\(W^q, W^k, W^v\\) and ask each token (or equivalently the matrix \\(X\\) ) to project itself to the three different spaces. \\[Q = XW^q\\] \\[K = XW^k\\] \\[V = XW^v\\] where \\(X\\) is the input embedding matrix of size \\(T \\times d\\) where \\(T\\) is the input sequence length and \\(d\\) is the embedding dimension. \\(Q, K, V\\) are the query, keys and values respectively and the dimensions of the \\(W^q, W^k,",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9526da303b971a977195d19a3809b3ae"
+  },
+  "chunk-4d93729c77091b72cc666f0bf9964d56": {
+    "tokens": 230,
+    "content": "; \\mathbf \\phi)} \\frac{1}{p(\\mathbf x)}\\Big]\\] \\[=- \\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\Big[ \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)} - \\log p(\\mathbf x) \\Big] \\] \\[= -\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)} + \\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log p(\\mathbf x) \\] \\[= -\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z |",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-4d93729c77091b72cc666f0bf9964d56"
+  },
+  "chunk-2f97eadac1cfc24e6c903499e7f9c0df": {
+    "tokens": 185,
+    "content": "token embedding will create vectors (a point) in the d_k dimensional space that will represent the keys. After training the keys that can best respond to the query will end up close to it . Computation of the attention scores Lets see an example of the projection of the input embeddings to the query and key spaces for the input context. Given matrices \\(X\\) and \\(W^{(q)}\\) (the key parameter matrix is analogous) where: \\[ X = \\begin{bmatrix} x_{1,1} & x_{1,2} & x_{1,3} & x_{1,4} & x_{1,5} & x_{1,6} & x_{1,7} & x_{1,8} \\\\ x_{2,1} & x_{2,2} & x_{2,3} & x_{2,4}",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2f97eadac1cfc24e6c903499e7f9c0df"
+  },
+  "chunk-84dfa8f7659e18c804b71f45f6515bda": {
+    "tokens": 141,
+    "content": "multihead-self-attention – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Large Language Models Multi-head self-attention Large Language Models Introduction to NLP Pipelines Text Tokenization Word2Vec Embeddings Word2Vec from scratch Word2Vec Tensorflow Tutorial Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-84dfa8f7659e18c804b71f45f6515bda"
+  },
+  "chunk-9901267f4d609b991cb6ae87d197f8cd": {
+    "tokens": 233,
+    "content": "\\(\\{\\mathbf{t}^{(i)}, \\boldsymbol\\ell^{(i)}\\}_{i=1}^N\\) ( \\(N=6\\) in the figure). Next we embed measure the dot product between all these text strings and images using a language encoder \\(f_t\\) and an image encoder \\(f_\\ell\\) , respectively. This produces a set of text embeddings \\(\\{\\mathbf{z}^{(i)}_t\\}_{i=1}^N\\) and a set of image embeddings \\(\\{\\mathbf{z}^{(i)}_\\ell\\}_{i=1}^N\\) . To compute the loss, we take the dot product \\(\\mathbf{z}^{(i)}_\\ell\\cdot \\mathbf{z}^{(j)}_t\\) for all \\(i, j \\in \\{1,\\ldots,6\\}\\) . Terms for which \\(i \\neq j\\) are the negative pairs and we seek to minimize these dot products (denominator of the loss); terms for which \\(i == j\\) are the positive pairs and",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9901267f4d609b991cb6ae87d197f8cd"
+  },
+  "chunk-98462a9e299f0b6bfbd9e3d4411bd2de": {
+    "tokens": 160,
+    "content": "- place ?loc-to - place ?city - city) :precondition (and (at ?truck ?loc-from) (in-city ?loc-from ?city) (in-city ?loc-to ?city)) :effect (and (not (at ?truck ?loc-from)) (at ?truck ?loc-to)) ) Action preconditions and effects can be more complicated than seen so far. They can be universally or existentially quantified using PDDL statement of the form (forall (?v1 ... ?vn) <effect >) . In that case, specific requirements must be used, for instance :adl . They can be conditional : (when <condition > <effect >) Action They can have costs, duration, time constraints etc. Defining the Problem Now, let define in the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-98462a9e299f0b6bfbd9e3d4411bd2de"
+  },
+  "chunk-b4ff64c4ac5c6dce70b2c9bbbd9fcbc1": {
+    "tokens": 130,
+    "content": "sampling from a posterior that is itself intractable. We then need to use an approximation to such distribution: \\(q(\\mathbf z| \\mathbf x ; \\mathbf \\phi)\\) and we call this the inference model that approximates the recognition model and help us optimize the marginal likelihood. The VAE encoder-decoder spaces are shown below. The picture shows the more compact space that is defined by the encoder. VAE spaces and distributions (from here ) The architecture of VAE includes four main components as shown below: VAE Architecture (from here ) Similar to the generative model, the inference model can be, in general, a",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b4ff64c4ac5c6dce70b2c9bbbd9fcbc1"
+  },
+  "chunk-71800556a86d826f498d294835a635c3": {
+    "tokens": 133,
+    "content": "domains has 5 operators: load-truck , load-airplaine , unload-truck , unload-airplane , drive-truck and fly-aiplane . In this tutorial, we will use indifferently the words \"action\" and \"operator\" (though in planning community, actions are ground operators, i.e., operator where variables are replaced by constants). Load Truck Operator For instance, in the logistics domain, a truck can be loaded... And to load a truck, we need a package pkg and a truck truck at a place loc . To load pkg in truck , these two objects must be at the same place loc . The effects of loading pkg in",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-71800556a86d826f498d294835a635c3"
+  },
+  "chunk-c87cd3d29a0304bd90833bfc5ea711a5": {
+    "tokens": 165,
+    "content": "Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On this page Self-supervised Learning Contrastive Learning Alignment and Uniformity CLIP Architecture Edit this page View source Report an issue Multimodal Reasoning Contrastive Language-Image Pretraining (CLIP) Contrastive Language-Image Pretraining (CLIP) Note This is shamelessly copied from the MIT Foundations of Computer Vision Book by Prof. William T. Freeman et al. Language is a representation of our world and so is perception",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c87cd3d29a0304bd90833bfc5ea711a5"
+  },
+  "chunk-1924bce105fc275bc16c4349d9e947c0": {
+    "tokens": 191,
+    "content": "\\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) + \\underbrace{\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)}}_{\\text{L = Evidence Lower Bound (ELBO)}}\\] The bracketed \\(\\mathcal L(q, \\phi, \\theta)\\) quantity is called Evidence Lower Bound (ELBO) and is a functional of the distribution \\(q\\) and a function of the parameters \\(\\phi\\) . Why its a lower bound of the log-likelihood (evidence) function \\(\\log p(\\mathbf x)\\) ? The reason is that the KL divergence is always positive: \\[KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1924bce105fc275bc16c4349d9e947c0"
+  },
+  "chunk-05138d8ffa727886ce5a03e16967daac": {
+    "tokens": 124,
+    "content": "knowledge graph of concepts and using it for retrieval and generation in a tutor. You will use this codebase as a starting point for your implementation. Langchain also offers an implementation you can use if you are familiar with that ecosystem. GraphRAG works at a high level as follows: Chunking Ask an LLM to extract entities and relations from each chunk Write nodes/edges into a graph store (NetworkX by default; Neo4j optional) Cluster the graph and write “community reports” (summaries) for each cluster At query time, retrieve either a local neighborhood or community summaries and generate the answer with citations",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-05138d8ffa727886ce5a03e16967daac"
+  },
+  "chunk-175a5eea9d1d7e4ef439a66c7ccf14ba": {
+    "tokens": 137,
+    "content": "amount \\(m\\) (called the margin), otherwise points are considered far enough apart (or close enough together). The InfoNCE loss is a variation that treats establishing a contrast as a classification problem: it tries to move points apart until you can classify the positive sample, for a given anchor, separately from all the negatives. The general formulation of these losses takes as input an anchor \\(\\mathbf{x}\\) , a positive example \\(\\mathbf{x}^+\\) , and one or more negative examples \\(\\mathbf{x}^-\\) . The positive and negative may be defined based on transformations, coocurrences, or something else. The full learning objective is to sum",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-175a5eea9d1d7e4ef439a66c7ccf14ba"
+  },
+  "chunk-e7e70e002637be38a46e156ed33d311a": {
+    "tokens": 161,
+    "content": "k_5 & q_8 k_6 & q_8 k_7 & q_8 k_8 \\\\ \\end{array} \\] Softmax The dot-product terms will be positive or negative numbers and as also in the case of the simpler version of the attention mechanism, we will pass them through a softmax function column-wise to obtain the attention weights \\(\\alpha_{ij}\\) for each of the tokens. Weighting the values We then use the attention weights to create a weighted sum of each of the values to obtain the output embedding. \\[\\hat v_i = \\sum_{j=1}^T \\alpha_{ij} v_j\\] where \\(\\alpha_{ij}\\) is the attention weight of the \\(j-th\\) token of the input",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e7e70e002637be38a46e156ed33d311a"
+  },
+  "chunk-e4128560175495f3e7bdea9ca2407a77": {
+    "tokens": 136,
+    "content": "out mathematically, the embeddings must be normalized , that is, each embedding vector must be a unit vector. Otherwise, the negative term can push embeddings toward being infinitely far apart from each other. Fortunately, it is standard practice in contrastive learning (and many other forms of representation learning) to apply \\(L_2\\) normalization to the embeddings. The result is that the embeddings will tend toward a uniform distribution over the surface of the \\(M\\) -dimensional hypersphere, where \\(M\\) is the dimensionality of the embeddings. See theorem 1 in ( wang2020hypersphere? ) for a formal statement of this fact. A result of",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e4128560175495f3e7bdea9ca2407a77"
+  },
+  "chunk-30904d0c0540f2f41d3ead47962416f6": {
+    "tokens": 149,
+    "content": "set of ground predicates. A predicate is ground iff all the variables are bound to objects. The ground predicates in the initial state represent true facts in this state. Any fact that is not represented in a state is false: In our case: (:init (in-city cdg paris) (in-city lhr london) (in-city north paris) (in-city south paris) (at plane lhr) (at truck cdg) (at p1 lhr) (at p2 lhr) ) Goal Description The goal is to have at(p1, north) and at(p2, south) in the final state (no matter the truth value of the other predicates). In PDDL, we write: (:goal (and",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-30904d0c0540f2f41d3ead47962416f6"
+  },
+  "chunk-e14eaaa0d4f30e526286c333d7db6ecd": {
+    "tokens": 138,
+    "content": "across the features for each individual example, rather than across the batch. This helps stabilize the learning process and can lead to faster convergence. Layer Normalization has been shown to improve training efficiency and therefore we apply layer normalization to the input of the multihead self attention (MHSA). \\[Z = \\mathtt{LayerNorm}(\\hat X)\\] In addition we borrow the same idea we have seen from ResNet, and add a skip connection from the input to the output of the MHSA. \\[\\hat Z = \\mathtt{MHSA}(Z) + \\hat X\\] We call the above block an attention block and since we know that depth helps",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e14eaaa0d4f30e526286c333d7db6ecd"
+  },
+  "chunk-db09b94e4d3bf6b9793eca0b3d3ef219": {
+    "tokens": 157,
+    "content": "Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language Models RNN Language Models Example of an RNN Language Model RNN-based Neural Machine Translation Character-level recurrent sequence-to-sequence model The BLEU Score Attention in RNN-based NMT Transformers and Self-Attention Single-head self-attention Multi-head self-attention Multilayer Perceptron (MLP) Positional Embeddings LLM Inference On this page Single-head self-attention Scaled dot-product self-attention Linear transformation of the input embeddings Computation of the attention scores Scaling Masking and Causal Attention Softmax Weighting the values Example Edit this page View source Report an issue Large Language Models Single-head",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-db09b94e4d3bf6b9793eca0b3d3ef219"
+  },
+  "chunk-57b7f9b1883ddd19c8bacc6f13c7a23a": {
+    "tokens": 134,
+    "content": ") scores = torch.bmm(query, key.transpose( 1 , 2 )) / sqrt(dim_k) weights = F.softmax(scores, dim =- 1 ) return torch.bmm(weights, value) Masking and Causal Attention When we decode we do not want to use the attention scores of the future tokens since we dont want to train the tranformer using ground truth that will simply wont be available during inference. To prevent this from happening we mask the attention scores of the future tokens by setting them to \\(-\\infty\\) before passing them through the softmax. This will cause the softmax to output a vector of values that are very close",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-57b7f9b1883ddd19c8bacc6f13c7a23a"
+  },
+  "chunk-b25dc470d4dceaa95b3e0266dadabbd0": {
+    "tokens": 139,
+    "content": "creating custom binary classifiers in this way. The two classes are described by two text strings (“triangle” versus “cricle”; “purple” versus “teal”; and “arrowhead” versus “ball”). The embeddings of the text descriptions are the red and green vectors. The classifier simply checks where an image embedding is closer, in angular distance, to the red vector or the green vector. This approach isn’t limited to binary classification: you can add more text vectors to partition the space in more ways. Figure 7: Making custom classifiers using CLIP. (a) Image embeddings in joint embedding space, (b) triangle-circle classifier, (c) purple-teal classifier, and",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b25dc470d4dceaa95b3e0266dadabbd0"
+  },
+  "chunk-dcbc4668efda6fb34b6c3af624607ab5": {
+    "tokens": 127,
+    "content": "Automated Reasoning – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Logical Reasoning Automated Reasoning Introduction Syllabus Rules, rule the world AI Agents Foundations Foundations Deep Neural Networks Training Deep Neural Networks Perception 2D Perception Recursive State Estimation State Estimation Large Language Models Large Language Models Logical Reasoning Automated Reasoning World Models",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-dcbc4668efda6fb34b6c3af624607ab5"
+  },
+  "chunk-b3b727f77d8764e14dc937c9abb4d326": {
+    "tokens": 119,
+    "content": "resources / references with exact spans (eg page numbers) and timecodes (video segments). Finally, generate the answers using the LLM and provide references to the student. You obviously need to generate answers that go from simpler concepts to the more complex ones. Question 1: What is attention in transformers and can you provide a python example of how it is used ? We expect to see a response that explains the dot product self-attention, the reasoning why Q, K, V vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b3b727f77d8764e14dc937c9abb4d326"
+  },
+  "chunk-1509a4ff3a51ad2380121ac448399db0": {
+    "tokens": 123,
+    "content": "into a set of candidate concepts and map those concepts (nodes) into subgraphs that will be used to generate the answer. You can use any method you like to do the mapping and you have to explain the rationale behind your choice. Effectively retrieval is now a subgraph selection problem where the subgraph is a small, semantically coherent neighborhood with: prerequisite chain(s) to scaffold explanations sibling nodes to generate near-transfer checks (although asking questions to the student is optional) attached resources / references with exact spans (eg page numbers) and timecodes (video segments). Finally, generate the answers using the LLM",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1509a4ff3a51ad2380121ac448399db0"
+  },
+  "chunk-1d7fcf0b94269031c6eca0cc50d9c48b": {
+    "tokens": 128,
+    "content": "Perception 2D Perception Recursive State Estimation State Estimation Large Language Models Large Language Models Logical Reasoning Automated Reasoning World Models Logical Inference Logical Agents Planning Task Planning Acting - Markov Decision Processes Markov Decision Processes Acting - Reinforcement Learning Reinforcement Learning Math Background Math for ML Textbook Probability Basics Linear Algebra for Machine Learning Calculus Resources Submitting Your Assignment / Project Your Programming Environment Learn Python Assignments Assignment 1 (undergrad) Assignment 1 (grad) Assignment 2 Assignment 3 Assignment 4 Project Introducing Erica - Your AI Tutor On this page Securing the cloud - automated reasoning Edit this page View source",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1d7fcf0b94269031c6eca0cc50d9c48b"
+  },
+  "chunk-3c385930ab22525d66741119eb336bad": {
+    "tokens": 139,
+    "content": "\\(a\\) , which is defined as “striped red circles.” Figure 6: Making a striped red circles'' (class $a$) versus polka dotted green square’’ (class \\(b\\) ) classifier using a trained CLIP. The CLIP model parameters are frozen and not updated. Instead the classifier is constructed by embedding the text describing to the two classes and seeing which is closer to the embedding of the query image. Inspired by figure 1 of ( radford2021learning? ) Figure 7 gives more examples of creating custom binary classifiers in this way. The two classes are described by two text strings (“triangle” versus “cricle”; “purple”",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3c385930ab22525d66741119eb336bad"
+  },
+  "chunk-99819c35bbf0101274afb02fb3b32d83": {
+    "tokens": 141,
+    "content": "singlehead-self-attention – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Large Language Models Single-head self-attention Large Language Models Introduction to NLP Pipelines Text Tokenization Word2Vec Embeddings Word2Vec from scratch Word2Vec Tensorflow Tutorial Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-99819c35bbf0101274afb02fb3b32d83"
+  },
+  "chunk-e5fc28e3fa1a335ecb12a2c46fcb3980": {
+    "tokens": 150,
+    "content": "for the original vector and the second case is when the original vector is element-wise multiplied by 100. Multiply the attention scores by 100 and then pass them through a softmax. You will see that the softmax will output a vector of values that are either very close to 0 or 1. The division by the \\(\\sqrt{d_k}\\) prevents this behavior. The code for the scaled dot product attention is shown below. def scaled_dot_product_attention(query, key, value): dim_k = query.size( - 1 ) scores = torch.bmm(query, key.transpose( 1 , 2 )) / sqrt(dim_k) weights = F.softmax(scores, dim =- 1 ) return torch.bmm(weights,",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e5fc28e3fa1a335ecb12a2c46fcb3980"
+  },
+  "chunk-58db40f02d7f13ee594b9d9828465bf4": {
+    "tokens": 166,
+    "content": "parameters. class MultiHeadAttention(nn.Module): def __init__ ( self , config): super (). __init__ () embed_dim = config.hidden_size num_heads = config.num_attention_heads head_dim = embed_dim // num_heads self .heads = nn.ModuleList( [AttentionHead(embed_dim, head_dim) for _ in range (num_heads)] ) self .output_linear = nn.Linear(embed_dim, embed_dim) def forward( self , hidden_state): x = torch.cat([h(hidden_state) for h in self .heads], dim =- 1 ) x = self .output_linear(x) return x Attention Blocks with Skip Connections Figure 3: Layer Normalization is a technique that normalizes the inputs across the features for each individual example, rather than across the batch. This helps stabilize the learning process and can",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-58db40f02d7f13ee594b9d9828465bf4"
+  },
+  "chunk-d4c926db9ae8b1019983597503e8c4b2": {
+    "tokens": 123,
+    "content": "that the contrastive loss (specifically the InfoNCE form) encourages two simple properties of the embeddings: alignment and uniformity. We have already seen that alignment is the property that two views in a positive pair will map to the same point in embedding point, that is, the mapping is invariant to the difference between the views. Uniformity comes from the negative term, which encourages embeddings to spread out and tend toward an evenly spread, uniform distribution. Importantly, for this to work out mathematically, the embeddings must be normalized , that is, each embedding vector must be a unit vector. Otherwise, the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d4c926db9ae8b1019983597503e8c4b2"
+  },
+  "chunk-e5abb78bcb858d97785136be6874424e": {
+    "tokens": 116,
+    "content": "airplane: airplane Two airports : cdg , lhr Two places : north , south Two cities : london , paris Two packages : p1 , p2 In PDDL, we write: (:objects plane - airplane truck - truck cdg lhr - airport south north - location paris london - city p1 p2 - package ) The types of the object can be only the types defined in the domain or the type object . Initial State The initial state is a set of ground predicates. A predicate is ground iff all the variables are bound to objects. The ground predicates in",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e5abb78bcb858d97785136be6874424e"
+  },
+  "chunk-ca1bf38ab59f9b70f923b001a10f0e1a": {
+    "tokens": 227,
+    "content": "& q_5 k_3 & q_5 k_4 & q_5 k_5 & -\\infty & -\\infty & -\\infty \\\\ q_6 & q_6 k_1 & q_6 k_2 & q_6 k_3 & q_6 k_4 & q_6 k_5 & q_6 k_6 & -\\infty & -\\infty \\\\ q_7 & q_7 k_1 & q_7 k_2 & q_7 k_3 & q_7 k_4 & q_7 k_5 & q_7 k_6 & q_7 k_7 & -\\infty \\\\ q_8 & q_8 k_1 & q_8 k_2 & q_8 k_3 & q_8 k_4 & q_8 k_5 & q_8 k_6 & q_8 k_7 & q_8 k_8 \\\\ \\end{array} \\] Softmax The dot-product terms will be positive",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ca1bf38ab59f9b70f923b001a10f0e1a"
+  },
+  "chunk-d356877d93c7363ed999b7b161849f6f": {
+    "tokens": 139,
+    "content": "older definition of the term, now overloaded with our more general notion of a contrastive loss being the broader family of any loss that pulls together positive samples and pushes apart negative samples), (2) the triplet loss ( chechik2010large? ) , and (3) the InfoNCE loss ( oord2018representation? ) . Hadsell et al.’s contrastive loss and the triplet loss add the concept of a margin to the vanilla formulation: they only push/pull when the distance is less than a specified amount \\(m\\) (called the margin), otherwise points are considered far enough apart (or close enough together). The InfoNCE loss is",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d356877d93c7363ed999b7b161849f6f"
+  },
+  "chunk-0637a2c138b3059067aa47ac4abb84fd": {
+    "tokens": 123,
+    "content": "response. The individual components are shown in Figure 1 . BaselineRAG System Overview Figure 1 BaselineRAG Featurization Figure 2 You will find good description of what a baseline RAG is, in this book . You are not using the book’s implementation since this RAG system in fact implements a baseline approach that is not compatible with what we are after: What we need is called GraphRAG and depends on a Knowledge Graph. It aligns well with our setting: building a knowledge graph of concepts and using it for retrieval and generation in a tutor. You will use this codebase as",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0637a2c138b3059067aa47ac4abb84fd"
+  },
+  "chunk-9327f35cd830b1b6c7918142ce95da94": {
+    "tokens": 157,
+    "content": "Contrastive Language-Image Pretraining (CLIP) – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Multimodal Reasoning Contrastive Language-Image Pretraining (CLIP) Multimodal Reasoning Text Tokenization Word2Vec Embeddings Word2Vec from scratch Word2Vec Tensorflow Tutorial Language Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9327f35cd830b1b6c7918142ce95da94"
+  },
+  "chunk-3bb266bce333dd6fb7ba93120bde879c": {
+    "tokens": 186,
+    "content": "x)\\) ? The reason is that the KL divergence is always positive: \\[KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) \\ge 0\\] and therefore if we eliminate the \\(KL\\) from the above equation we need to change the summation to a \\(\\ge\\) relation. \\[\\log p(\\mathbf x) \\ge \\underbrace{\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)}}_{\\text{L = Evidence Lower Bound (ELBO)}}\\] Why its a useful quantity to consider for optimization? Back to the equality: \\[⇒\\log p(\\mathbf x) =",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3bb266bce333dd6fb7ba93120bde879c"
+  },
+  "chunk-3e73d0ea822bd93892030b14ea442531": {
+    "tokens": 152,
+    "content": "generative model or decoder given by \\(p(\\mathbf x| \\mathbf z ; \\mathbf \\theta) p(\\mathbf z | \\theta)\\) . This stage is called the recognition model or encoder and is given by \\(p(\\mathbf z| \\mathbf x ; \\mathbf \\theta)\\) . The premise is this: the posterior \\(p(\\mathbf z | \\mathbf x ; \\mathbf \\theta)\\) will result into a much more meaningful and compact latent space \\(\\mathbf z\\) than the prior \\(p(\\mathbf z | \\mathbf \\theta)\\) . This encoding though, calls for sampling from a posterior that is itself intractable. We then need to use an approximation to such distribution: \\(q(\\mathbf z|",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3e73d0ea822bd93892030b14ea442531"
+  },
+  "chunk-a7e50daf125d6203121bc65380130011": {
+    "tokens": 150,
+    "content": "in truck , these two objects must be at the same place loc . The effects of loading pkg in truck are that in(pkg, truck) becomes true and at(pkg, loc) becomes false. Any other fact in the current state does not change: (:action load-truck :parameters (?pkg - package ?truck - truck ?loc - place) :precondition (and (at ?truck ?loc) (at ?pkg ?loc)) :effect (and (not (at ?pkg ?loc)) (in ?pkg ?truck)) ) Load Airplane Operator Action/Operator : Description : Load a package pkg in an airplane airplane at a place loc , Precondition : at(pkg, loc) and at(airplane, loc) must",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a7e50daf125d6203121bc65380130011"
+  },
+  "chunk-63d8c7b9f3ca304f2f4c729fe6a0ccf2": {
+    "tokens": 112,
+    "content": "no reason to make the dimensionality of the value space the same as the dimensionality of the key space but typically they are the same. We use the value projection ( \\(V\\) ) as a way to decouple the determination of the attention weights from the actual adjustment of their specific embeddings. As an example, in the context “The hiking trail led us through bear country”, if the key represents the adjective of an input token that responded to a noun query, the value will represent the specific adjective ( bear ) that adjusts the specific noun ( country )",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-63d8c7b9f3ca304f2f4c729fe6a0ccf2"
+  },
+  "chunk-2616317eaa28cb2bcfb626b56fb52f93": {
+    "tokens": 137,
+    "content": "a combined total signal, and any signal and its transformation can be considered two co-occurring ways of measuring the underlying world. Nonetheless, it is often easiest to conceptualize these two approaches separately, and next we give learning diagrams for each: In these diagrams, \\(D\\) is a distance function. Above we give just one simple form for the contrastive objective; many variations have been proposed. Three of the most popular are (1) Hadsell et al.’s “constrastive loss” ( hadsell2006dimensionality? ) (an older definition of the term, now overloaded with our more general notion of a contrastive loss being the broader family",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2616317eaa28cb2bcfb626b56fb52f93"
+  },
+  "chunk-5516e69ede69d1b7f8ca8110bf2b8b28": {
+    "tokens": 131,
+    "content": "able to connect to a local Ollama or LM Studio server instance and be configured to use the qwen2.5 model. If your hardware simply does not allow you to run locally any version of the Qwen2.5 models you can use a remote API to access it and we recommend OpenRouter . GraphRAG Retrieval Augmented Generation. It combines the strengths of retrieval-based and generation-based models, enabling the model to retrieve relevant information from a large corpus and generate a coherent domain-specific response. The individual components are shown in Figure 1 . BaselineRAG System Overview Figure 1 BaselineRAG Featurization Figure 2 You",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5516e69ede69d1b7f8ca8110bf2b8b28"
+  },
+  "chunk-9aecc25c34faa5ff865463359a087bea": {
+    "tokens": 179,
+    "content": "Lower Bound (ELBO)}}\\] Why its a useful quantity to consider for optimization? Back to the equality: \\[⇒\\log p(\\mathbf x) = KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) + \\underbrace{\\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z , \\mathbf x; \\mathbf \\theta))}{q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)}}_{\\text{L = Evidence Lower Bound (ELBO)}}\\] the answer to this question is straightforward. If we maximize the ELBO we minimize the KL divergence, by definition this is zero only when \\(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) = p(\\mathbf z",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9aecc25c34faa5ff865463359a087bea"
+  },
+  "chunk-9ae681fbd13cfbe89e3fda7d1e7f5a79": {
+    "tokens": 115,
+    "content": "task that dependents on a representation and our predictions are correct, then we have learned a good representation. This is a very general idea and it applies to many different domains. For example, in vision, we can use a pretext task to learn a representation of an image by predicting the pixels in the image. This is called self-supervised learning because we are using the data itself to supervise the learning process. Learning under these settings Self-supervised Learning In NLP labeled data for representation learning are plentiful but in computer vision they are quite scarce. When we don’t have labeled",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9ae681fbd13cfbe89e3fda7d1e7f5a79"
+  },
+  "chunk-5b8add58086aab9b2b2fb0c3b02a4b20": {
+    "tokens": 238,
+    "content": "-\\infty & -\\infty & -\\infty & -\\infty & -\\infty \\\\ q_2 & q_2 k_1 & q_2 k_2 & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty \\\\ q_3 & q_3 k_1 & q_3 k_2 & q_3 k_3 & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty \\\\ q_4 & q_4 k_1 & q_4 k_2 & q_4 k_3 & q_4 k_4 & -\\infty & -\\infty & -\\infty & -\\infty \\\\ q_5 & q_5 k_1 & q_5 k_2 & q_5 k_3 & q_5 k_4 & q_5 k_5 & -\\infty & -\\infty & -\\infty \\\\ q_6 & q_6 k_1",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5b8add58086aab9b2b2fb0c3b02a4b20"
+  },
+  "chunk-f6641e40121bf773ff57d0a659c229b1": {
+    "tokens": 143,
+    "content": "Architecture Variational AutoEncoder - Keras Variational Autoencoder from Scratch - Torch Stable Diffusion Playground Stable Diffusion - Part 1 Stable Diffusion from Scratch Stable Diffusion Tutorial Generative Modeling VAE Architecture VAE Architecture In a previous section we have seen that VAE helps us define the latent space. The ‘right’ latent space is the one that makes the distribution \\(p(\\mathbf z| \\mathbf \\theta)\\) the most likely to produce \\(\\mathbf x\\) . We are therefore introducing a stage that complements the aforementioned generative model or decoder given by \\(p(\\mathbf x| \\mathbf z ; \\mathbf \\theta) p(\\mathbf z | \\theta)\\) . This stage",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f6641e40121bf773ff57d0a659c229b1"
+  },
+  "chunk-5db09397c15c4231d294362bcadd4e4b": {
+    "tokens": 126,
+    "content": ":typing) Types We will use the following types: Places, cities and physical objects are considered as objects, Packages and vehicles are physical objects, Trucks and airplanes are vehicles, Airports and locations are places. In PDDL, we write: (:types city place physobj - object package vehicle - physobj truck airplane - vehicle airport location - place ) Predicates We will use the following predicates: in-city(loc, city) - true iff a place loc is in the city city at(obj, loc) - true iff a physical object obj is at place loc in(pkg, veh) - true iff the a package pkg is in",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5db09397c15c4231d294362bcadd4e4b"
+  },
+  "chunk-d9aacf858f8dd6286ed051c708e47edc": {
+    "tokens": 309,
+    "content": "&= -\\log \\frac{e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}^+)/\\tau}}{e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}^+)/\\tau} + \\sum_i e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}_i^-)/\\tau}} \\quad\\quad\\quad\\quad\\quad\\quad\\triangleleft \\quad \\text{InfoNCE} \\end{aligned} \\tag{1}\\] Notice that the InfoNCE loss is a log softmax over a vector of scores \\(f_1(\\mathbf{x})^\\mathsf{T}f_2(c)/\\tau\\) with \\(c \\in \\{\\mathbf{x}^+, \\mathbf{x}_1^-, \\ldots, \\mathbf{x}_N^-\\}\\) ; you can therefore think of this loss as corresponding to a classification problem where the ground truth class is \\(\\mathbf{x}^+\\) and the other possible classes are \\(\\{\\mathbf{x}_1^-, \\ldots, \\mathbf{x}_N^-\\}\\) (refer to ?@sec-intro_to_learning to revisit softmax classification). Alignment and Uniformity Wang and Isola ( wang2020hypersphere? ) showed that the contrastive loss (specifically the InfoNCE form) encourages two simple properties of the embeddings: alignment and uniformity. We have",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d9aacf858f8dd6286ed051c708e47edc"
+  },
+  "chunk-b228a3efe9bd2e7dd3debacc8f06d25b": {
+    "tokens": 119,
+    "content": "derivation. If the student can apply the idea in this slightly new situation, we say the learner has achieved near transfer - its a term that we use in pedagogy to effectively mean some form of hierarchical / prerequisite concept relationship. Present elements of the KG that highlight a concept and its relationships to other concepts, resources, and examples. You can use a notebook for such visualizations. M4: Query and Generation Milestone Given a user query \\(q\\) , turn it into a set of candidate concepts and map those concepts (nodes) into subgraphs that will be used to generate the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b228a3efe9bd2e7dd3debacc8f06d25b"
+  },
+  "chunk-30fc2f60192ab43dffced650e0aa6a9d": {
+    "tokens": 133,
+    "content": "the slides. The ingestion pipeline should be able to store the raw data in a database of your choice. Ensure you have a notebook cell / markdown file that prints all the URLs that you have ingested either explicitly or via a database query. You can use Mongodb for storing the raw data or simply use files in a directory structure. M3: GraphRAG Construction Milestone Implement the Knowledge Graph. The KG will have as Nodes the following relations: concept: {id, title, difficulty, aliases, definitions} resource: {type ∈ {pdf, slide, video, web}, span, timecodes} example: worked example snippets and as Edges",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-30fc2f60192ab43dffced650e0aa6a9d"
+  },
+  "chunk-e6b150672c506fa8f8f1c48c22a4eff0": {
+    "tokens": 111,
+    "content": "Introducing Erica - Your AI Tutor On this page Securing the cloud - automated reasoning Edit this page View source Report an issue Logical Reasoning Automated Reasoning Automated Reasoning We have seen in an earlier chapter where we introduced a dynamical system governing the state evolution of the environment that a state is composed of variables and such factored representations are key in allowing reasoning at the belief space that are efficiently computed using recursive state estimators. We called this subsystem probabilistic reasoning subsystem and we positioned it immediately after the reflexive perception for a good reason. It is processing",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e6b150672c506fa8f8f1c48c22a4eff0"
+  },
+  "chunk-ae9f686391396c2ea9169db71653fcd9": {
+    "tokens": 202,
+    "content": "that describe images of classes \\(a\\) , \\(b\\) , and so on, Embed each sentence into a \\(\\mathbf{z}\\) -vector, \\(\\mathbf{z}_t^{a} = f_t(\\mathbf{t}^{a}), \\mathbf{z}_t^{b} = f_t(\\mathbf{t}^{a}),\\) and so on. Embed your query image into a \\(\\mathbf{z}\\) -vector, \\(\\mathbf{z}_{\\ell}^{q} = f_{\\ell}(\\boldsymbol\\ell^{q})\\) . See which sentence embedding is closest to your image embedding; that’s the predicted class. These steps are visualized in Figure 6 . The green outlined dot product is the highest, indicating that the query image will be classified as class \\(a\\) , which is defined as “striped red circles.” Figure 6: Making a striped red circles'' (class $a$) versus polka",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ae9f686391396c2ea9169db71653fcd9"
+  },
+  "chunk-7639d1159d99fcf13fc49b2f9f407ede": {
+    "tokens": 134,
+    "content": "the lower attention scores. We can do an experiment to see the behavior of softmax. import numpy as np # Creating an 8-element numpy vector with random gaussian values vector = np.random.randn( 8 ) # Softmax function def softmax(x): e_x = np.exp(x - np. max (x)) # Stability improvement by subtracting the max return e_x / e_x. sum () # Applying softmax to the vector softmax_vector = softmax(vector) softmax_vector Lets plot the two results - the first case is when for the original vector and the second case is when the original vector is element-wise multiplied by 100. Multiply the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7639d1159d99fcf13fc49b2f9f407ede"
+  },
+  "chunk-51fc3ebfc2d29ea94aa9c869a8013110": {
+    "tokens": 170,
+    "content": "a package pkg in an airplane airplane at a place loc , Precondition : at(pkg, loc) and at(airplane, loc) must be true, Effect : in(pkg, airplane) becomes true and at(airplane, loc) becomes false. In PDDL: (:action load-airplane :parameters (?pkg - package ?airplane - airplane ?loc - place) :precondition (and (at ?pkg ?loc) (at ?airplane ?loc)) :effect (and (not (at ?pkg ?loc)) (in ?pkg ?airplane)) ) Unload Truck Operator Action/Operator : Description : Unload a package pkg in a truck truck at a place loc , Precondition : in(pkg, truck) and at(truc, loc) must be true, Effect : at(pkg, loc) becomes",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-51fc3ebfc2d29ea94aa9c869a8013110"
+  },
+  "chunk-5c33b12fd5bbe43d088e8180f4dfd87e": {
+    "tokens": 125,
+    "content": "input token is part of outside the context. Lets look at the grammatical structure of the following sentences: “I love bears ” Subject: I Verb: love Object: bears “She bears the pain” Subject: She Verb: bears Object: the pain “ Bears won the game” Subject: Bears Verb: won Object: the game Each sentence above follows a subject-verb-object structure, where the subject performs the action expressed by the verb on the object. You can notice that bears plays a different function in each sentence: as an object, as a verb, and as a subject. In addition, we have other and more",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5c33b12fd5bbe43d088e8180f4dfd87e"
+  },
+  "chunk-ecf270f146d187f5947cf7687a1191de": {
+    "tokens": 148,
+    "content": "heads, followed by a linear transformation with the weight matrix \\(W^o\\) that we call mixing matrix since it mixes / combines the outputs of the heads. The \\(W^o\\) matrix and the \\(W_h^q, W_h^k, W_h^v\\) matrices are learned during training. The complexity of running multiple heads does not scale with the number of heads since as you can also see in the code below we divide the head-size by the number of heads, avoiding a corresponding increase in the number of parameters. class MultiHeadAttention(nn.Module): def __init__ ( self , config): super (). __init__ () embed_dim = config.hidden_size num_heads = config.num_attention_heads head_dim",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ecf270f146d187f5947cf7687a1191de"
+  },
+  "chunk-9e1fa0f629c50b1ac93663f9cbf0c981": {
+    "tokens": 148,
+    "content": "> 06: ( load-truck p2 truck cdg) [1] > 07: ( drive-truck truck cdg south paris) [1] > 08: ( unload-truck p2 truck south) [1] > 09: (drive-truck truck south north paris) [1] > 10: ( unload-truck p1 truck north) [1] > > plan total cost: 11,00 > > time spent: 0,09 seconds parsing > 0,03 seconds encoding > 0,01 seconds searching > 0,13 seconds total time > The Unified Planning Library Manufacrturing Robot Planning in PDDL Edit this page View source Report an issue",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9e1fa0f629c50b1ac93663f9cbf0c981"
+  },
+  "chunk-89614d99cc7b78ccf3cdf366b2958e93": {
+    "tokens": 162,
+    "content": "pairs and \\(\\alpha\\) , \\(t\\) , and \\(\\lambda\\) are hyperparameters of the losses. CLIP Architecture Here, we use the pretext task idea on a supervisory signal of the natural language to create a representation of the scene it describes. CLIP is a contrastive method (see ?@sec-representation_learning-contrastive_learning ) in which one data view is the image and the other is a caption describing the image. Specifically, CLIP is a form of contrastive learning from co-occurring visual and linguistic views that is formulated as follows: where \\(\\boldsymbol\\ell\\) represents an image, \\(\\mathbf{t}\\) represents text, \\(\\mathbb{S}^{d_z}\\) represents the space of unit vectors of dimensionality",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-89614d99cc7b78ccf3cdf366b2958e93"
+  },
+  "chunk-96acc8ecd7298f81cb0386fe6d9bbcaf": {
+    "tokens": 190,
+    "content": "south) in the final state (no matter the truth value of the other predicates). In PDDL, we write: (:goal (and (at p1 north) (at p2 south)) ) The result will be: text > 00: ( loadd-airplane p1 plane lhr) [1] > 01: ( loadd-airplane p2 plane lhr) [1] > 02: ( fly-airplane plane lhr cdg) [1] > 03: ( unload-airplane p1 plane cdg) [1] > 04: ( unload-airplane p2 plane cdg) [1] > 05: ( load-truck p1 truck cdg) [1] > 06: ( load-truck p2 truck cdg) [1] > 07: ( drive-truck truck cdg south paris) [1] > 08: (",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-96acc8ecd7298f81cb0386fe6d9bbcaf"
+  },
+  "chunk-71e7394bf92a7151b6b24f6089eb88b2": {
+    "tokens": 327,
+    "content": "of the embeddings. See theorem 1 in ( wang2020hypersphere? ) for a formal statement of this fact. A result of this analysis is we may explicit decompose contrastive learning into one loss for alignment and another for uniformity, with the following forms: \\[\\begin{aligned} \\mathcal{L}_{\\texttt{align}}(f;\\alpha) &= \\mathbb{E}_{(\\mathbf{x},\\mathbf{x}^+) \\sim p_{\\texttt{pos}}} [\\left\\lVert f(\\mathbf{x}) - f(\\mathbf{x}^+)\\right\\rVert_2^{\\alpha}]\\\\ \\mathcal{L}_{\\texttt{unif}}(f;t) &= \\log \\mathbb{E}_{\\mathbf{x} \\sim p_{\\texttt{data}}, \\, \\mathbf{x}^- \\sim p_{\\texttt{data}}} [e^{-t\\left\\lVert f(\\mathbf{x}) - f(\\mathbf{x}^-)\\right\\rVert_2^2}]\\\\ \\mathcal{L}(f;\\alpha,t,\\lambda) &= \\mathcal{L}_{\\texttt{align}}(f;\\alpha) + \\lambda \\mathcal{L}_{\\texttt{unif}} \\end{aligned}\\] where \\(p_{\\texttt{pos}}\\) is the distribution of positive pairs and \\(\\alpha\\) , \\(t\\) , and \\(\\lambda\\) are hyperparameters of the losses. CLIP Architecture Here, we use the pretext",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-71e7394bf92a7151b6b24f6089eb88b2"
+  },
+  "chunk-a04861903614616d336b00096130f8a6": {
+    "tokens": 189,
+    "content": "X W_h^q\\] \\[K_h = X W_h^k\\] \\[V_h = X W_h^v\\] where \\(W_h^q, W_h^k, W_h^v\\) are the weight matrices of the \\(h-th\\) head. The output of the multi-head attention is then given by \\[\\hat X = \\mathtt{concat}(H_1, H_2, ..., H_H)W^o\\] where \\(W^o\\) is the output weight matrix with dimensions \\(H d_v \\times d\\) and typically \\(d_v = d/H\\) . Figure 2: Multi-head attention mechanism. Each head learns a different pattern, and the output is a concatenation of the outputs of all heads, followed by a linear transformation with the weight matrix \\(W^o\\) that we call mixing matrix since it mixes /",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a04861903614616d336b00096130f8a6"
+  },
+  "chunk-5e821bceca23e38586c728f7eb2311c5": {
+    "tokens": 119,
+    "content": "the most to change the query will end up close to it . The actual change of the query is done by the values. The scores are then given in matrix form by: \\[S = QK^T\\] Scaling We divide the scores by the square root of the dimension of the key vector ( \\(d_k\\) ). This is done in to prevent the softmax from saturating on the higher attention score elements and severely attenuating the attention weights that correspond to the lower attention scores. We can do an experiment to see the behavior of softmax. import numpy as np #",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5e821bceca23e38586c728f7eb2311c5"
+  },
+  "chunk-da4406381e018af7d49dc8586e146318": {
+    "tokens": 170,
+    "content": "at a place loc , Precondition : in(pkg, truck) and at(truc, loc) must be true, Effect : at(pkg, loc) becomes true and in(pkg, truck) becomes false. In PDDL: (:action unload-truck :parameters (?pkg - package ?truck - truck ?loc - place) :precondition (and (at ?truck ?loc) (in ?pkg ?truck)) :effect (and (not (in ?pkg ?truck)) (at ?pkg ?loc)) ) Unload Airplane Operator Action/Operator : Description : Unload a package pkg in an airplane airplane at a place loc , Precondition : in(pkg, airplane) and at(airplane, loc) must be true, Effect : at(pkg, loc) becomes true and in(pkg, airplane) becomes false. In",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-da4406381e018af7d49dc8586e146318"
+  },
+  "chunk-e912f32709af657fa972ec33d86a7b3e": {
+    "tokens": 127,
+    "content": "and Causal Attention Softmax Weighting the values Example Edit this page View source Report an issue Large Language Models Single-head self-attention Single-head self-attention Scaled dot-product self-attention In the simple attention mechanism, the attention weights are computed deterministically from the input context. We call the combination of context-free embedding (eg word2vec) and positional embedding, the input embedding. What we would like to do is to Given the input embedding, the output embedding has no information about the data distribution that the input token is part of outside the context. Lets look at the grammatical structure of the following sentences: “I love",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e912f32709af657fa972ec33d86a7b3e"
+  },
+  "chunk-5273cb005fffc8022b95c78d6c1df10d": {
+    "tokens": 159,
+    "content": "on the fly. With language, you can describe a new conceptual category with ease. Suppose I want a classifier to distinguish striped red circles from polka dotted green squares. These classes can be described in English just like that: “striped red circles” versus “polka dotted green square.” CLIP can then leverage this amazing ability of English to compose concepts and construct an image classifier for these two concepts. Here’s how it works. Given a set of sentences \\(\\{\\mathbf{t}^{a}, \\mathbf{t}^{b}, \\ldots\\}\\) that describe images of classes \\(a\\) , \\(b\\) , and so on, Embed each sentence into a \\(\\mathbf{z}\\) -vector, \\(\\mathbf{z}_t^{a}",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5273cb005fffc8022b95c78d6c1df10d"
+  },
+  "chunk-0728a0ba0389f629d933844291426309": {
+    "tokens": 111,
+    "content": "subsystem probabilistic reasoning subsystem and we positioned it immediately after the reflexive perception for a good reason. It is processing a very high ‘bandwidth’ state information that is noisy and needs to be filtered by - you guessed it - Bayesian filters to make it very useful for the subsequent upstream services of the AI system. In this chapter we will see another powerful representation, internal to the agent, that can help agents to reason by expressing assertions about the world. These assertions are called sentences and are expressed in a knowledge representation language that is used to build a",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0728a0ba0389f629d933844291426309"
+  },
+  "chunk-251f2d6d1c019734089e6854eb71c964": {
+    "tokens": 116,
+    "content": "for each cluster At query time, retrieve either a local neighborhood or community summaries and generate the answer with citations Project Milestones M1: Environment and Tooling Milestone This is self explanatory - you need to have at least a docker compose file that will create the development environment for the GraphRAG system. M2: Ingestion Milestone Here we implement the ingestion pipeline that will ingest multiple media sources such as the course web site, youtube videos related to the course and the slides. The ingestion pipeline should be able to store the raw data in a database of your choice. Ensure",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-251f2d6d1c019734089e6854eb71c964"
+  },
+  "chunk-b7a8492d9df2910e569c7cf98fff4bdd": {
+    "tokens": 391,
+    "content": "positive and negative may be defined based on transformations, coocurrences, or something else. The full learning objective is to sum over many samples of anchors, positives, and negatives, producing a sampled set evaluated according to the losses as follows: \\[\\begin{aligned} \\mathcal{L}(\\mathbf{x}, \\mathbf{x}^+, \\mathbf{x}^-) &= \\max(D(f(\\mathbf{x}), f(\\mathbf{x}^+)-m_{\\texttt{pos}},0) - \\nonumber \\\\ &\\quad \\max(m_{\\texttt{neg}} - D(f(\\mathbf{x}), f(\\mathbf{x}^-),0) \\quad \\triangleleft \\quad \\text{Hadsell et al. ``contrastive''}\\\\ \\mathcal{L}(\\mathbf{x}, \\mathbf{x}^+, \\mathbf{x}^-) &= \\max(D(f(\\mathbf{x}), f(\\mathbf{x}^+)) - D(f(\\mathbf{x}), f(\\mathbf{x}^-)) + m, 0) \\quad\\quad \\triangleleft \\quad \\text{triplet}\\\\ \\mathcal{L}(\\mathbf{x}, \\mathbf{x}^+, \\{\\mathbf{x}_i^-\\}_{i=1}^N) &= -\\log \\frac{e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}^+)/\\tau}}{e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}^+)/\\tau} + \\sum_i e^{f(\\mathbf{x})^\\mathsf{T}f(\\mathbf{x}_i^-)/\\tau}} \\quad\\quad\\quad\\quad\\quad\\quad\\triangleleft \\quad \\text{InfoNCE} \\end{aligned} \\tag{1}\\] Notice that the InfoNCE loss is a log softmax",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b7a8492d9df2910e569c7cf98fff4bdd"
+  },
+  "chunk-8d6815873740c94e2060a6b34162257f": {
+    "tokens": 158,
+    "content": "title, difficulty, aliases, definitions} resource: {type ∈ {pdf, slide, video, web}, span, timecodes} example: worked example snippets and as Edges the following relations: prereq_of(u → v) [DAG used by the planner] explains(resource → concept) exemplifies(example → concept) near_transfer(concept ↔ concept) [siblings, contrasts_with, is_a, part_of] When a student masters concept c1 (say, Jensen’s inequality), you want to test whether that knowledge transfers to a closely related context c2 for example, the variational lower bound (ELBO), which uses Jensen’s inequality inside its derivation. If the student can apply the idea in this slightly new situation, we say the learner has achieved near",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8d6815873740c94e2060a6b34162257f"
+  },
+  "chunk-47347221c55bcc8f1856d45da47afe2e": {
+    "tokens": 93,
+    "content": "= \\mathtt{MHSA}(Z) + \\hat X\\] We call the above block an attention block and since we know that depth helps in representations learning, we therefore want to stack multiple attention blocks, but before we do so we apply a feedforward layer to the output of each attention block for the reasons we describe below. Single-head self-attention Multilayer Perceptron (MLP) Edit this page View source Report an issue",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-47347221c55bcc8f1856d45da47afe2e"
+  },
+  "chunk-44f7edbf68c6d61f1eda6341872cd3c9": {
+    "tokens": 198,
+    "content": "passing them through the softmax. This will cause the softmax to output a vector of values that are very close to 0 for the future tokens - for query \\(q_i\\) , only keys \\(k_1\\) through \\(k_i\\) are accessible. All keys \\(k_j\\) with \\(j > i\\) are masked (i.e., set to \\(-\\infty\\) ). \\[ \\begin{array}{cccccccc} & k_1 & k_2 & k_3 & k_4 & k_5 & k_6 & k_7 & k_8 \\\\ q_1 & q_1 k_1 & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty & -\\infty \\\\ q_2 & q_2 k_1 & q_2 k_2 & -\\infty &",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-44f7edbf68c6d61f1eda6341872cd3c9"
+  },
+  "chunk-9e5ce531950e2a80d0c630acc2dcd351": {
+    "tokens": 134,
+    "content": "VAE Architecture – Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision DATA MINING - BEING PORTED MEDIA AI for Robotics ABOUT ME Generative Modeling VAE Architecture Generative Modeling Generative Modeling The Expectation - Maximization (EM) Algorithm EM for MoG Example Variational Inference VAE Architecture Variational AutoEncoder - Keras Variational Autoencoder from Scratch - Torch Stable Diffusion Playground Stable Diffusion - Part 1 Stable",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9e5ce531950e2a80d0c630acc2dcd351"
+  },
+  "chunk-0967d877b12333e8b52a9d6ebeb046a4": {
+    "tokens": 143,
+    "content": "iff a physical object obj is at place loc in(pkg, veh) - true iff the a package pkg is in a vehicle veh In PDDL, question marks are used for variables: (:predicates (in-city ?loc - place ?city - city) (at ?obj - physobj ?loc - place) (in ?pkg - package ?veh - vehicle) ) Operators We are going to define the operators of the actions of the logistics domain, i.e., the means to change the states of the world. The domains has 5 operators: load-truck , load-airplaine , unload-truck , unload-airplane , drive-truck and fly-aiplane . In this tutorial, we",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0967d877b12333e8b52a9d6ebeb046a4"
+  },
+  "chunk-51ef1e6179993427511cb100b64899c5": {
+    "tokens": 172,
+    "content": "KL divergence, by definition this is zero only when \\(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) = p(\\mathbf z | \\mathbf \\theta))\\) , for the equality to hold. In other words, we maximize the likelihood by effectively maximizing the \\(\\mathcal L(q, \\phi, \\theta)\\) since \\[\\mathcal L(q, \\phi, \\theta) = \\log p(\\mathbf x) - KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) \\le \\log p(\\mathbf x)\\] This is illustrated bellow: Bishop KL represents the tightness of the ELBO bound As the figure above shows \\(KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-51ef1e6179993427511cb100b64899c5"
+  },
+  "chunk-cbf10336809d8776053299c197480585": {
+    "tokens": 115,
+    "content": "Vision Book by Prof. William T. Freeman et al. Language is a representation of our world and so is perception - both language and vision are trying to solve the same problem. We saw in ?@sec-word2vec that a prediction task can be used to learn a representation of a word - recall we are predicting the words that are frequent closeby. This type of task is called a pretext task . The idea is that if we learn a prediction task that dependents on a representation and our predictions are correct, then we have learned a good representation. This is",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-cbf10336809d8776053299c197480585"
+  },
+  "chunk-fe423a0387274e65441b9c527e0e5b66": {
+    "tokens": 132,
+    "content": "the embedding dimension. Q, K, V are the query, keys and values respectively and the dimensions of the Wq, Wk, Wv matrices are d times d_q, d times d_k, d times d_v respectively. Queries and keys occupy typically the same dimensional space  d_k . Each token is undertaking three roles, lets focus here on the first two: In a query role the current token effectively seeks to find other functions eg ‘adjective’ In a key role the current token effectively expresses its own function eg ‘noun’. For example: ‘I am key=noun’ and I am seeking for a earlier query=adjective’.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-fe423a0387274e65441b9c527e0e5b66"
+  },
+  "chunk-0197fb4f7d908b75f6dc7f9e7f7e501c": {
+    "tokens": 144,
+    "content": "-sum_ z q( z |  x ;  phi) log fracp( z ,  x;  theta))q( z |  x ;  phi) + log p( x) sum_ z q( z |  x ;  phi) ] [= -sum_ z q( z |  x ;  phi) log fracp( z ,  x;  theta))q( z |  x ;  phi) + log p( x)] [log p( x) = KL(q( z |  x ;  phi) || p( z |  theta)) + underbracesum_ z q( z |  x ;  phi) log",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0197fb4f7d908b75f6dc7f9e7f7e501c"
+  },
+  "chunk-03ff0e124b9aca9c675f84f857167004": {
+    "tokens": 261,
+    "content": "x{1,3}  x{1,4}  x{1,5}  x{1,6}  x{1,7}  x{1,8}  x{2,1}  x{2,2}  x{2,3}  x{2,4}  x{2,5}  x{2,6}  x{2,7}  x{2,8}   x{16,1}  x{16,2}  x{16,3}  x{16,4}  x{16,5}  x{16,6}  x{16,7}  x{16,8} end{bmatrix} ] [ W^{(q)} = begin{bmatrix} w{1,1}  w{1,2}  w{1,3}  w{1,4}  w{2,1}  w{2,2}  w{2,3}  w{2,4}          w{8,1}  w{8,2}  w{8,3}  w{8,4} end{bmatrix} ] The",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-03ff0e124b9aca9c675f84f857167004"
+  },
+  "chunk-38e1b745f0e9fa9a088b222cd15352f8": {
+    "tokens": 162,
+    "content": ";  phi)} frac{1}{p( x)}Big]] [=- sum_{ z} q( z |  x ;  phi) Big[ log frac{p( z ,  x;  theta))}{q( z |  x ;  phi)} - log p( x) Big] ] [= -sum_{ z} q( z |  x ;  phi) log frac{p( z ,  x;  theta))}{q( z |  x ;  phi)} + sum_{ z} q( z |  x ;  phi) log p( x) ] [= -sum_{ z} q( z |  x ;  phi) log frac{p( z ,  x;  theta))}{q( z |",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-38e1b745f0e9fa9a088b222cd15352f8"
+  },
+  "chunk-3f7542d9928603428369182cfab30eb9": {
+    "tokens": 124,
+    "content": "q_2  q_2 k_1  q_2 k_2              q_3  q_3 k_1  q_3 k_2  q_3 k_3            q_4  q_4 k_1  q_4 k_2  q_4 k_3  q_4 k_4          q_5  q_5 k_1  q_5 k_2  q_5 k_3  q_5 k_4  q_5 k_5        q_6  q_6 k_1",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3f7542d9928603428369182cfab30eb9"
+  },
+  "chunk-f4756505f7a018b43df6380a6c99e520": {
+    "tokens": 197,
+    "content": "&= -log e^{f(x)^{T}f(x^+)/tau}/(e^{f(x)^{T}f(x^+)/tau) + sum_i e^{f(x)^{T}f(x_i^-)/tau}} text{InfoNCE} end{aligned} ] Notice that the InfoNCE loss is a log softmax over a vector of scores (f_1(x)^{T}f_2(c)/tau) with (c in {x^+, x_1^-, ldots, x_N^-}) ; you can therefore think of this loss as corresponding to a classification problem where the ground truth class is (x^+) and the other possible classes are ({x_1^-, ldots, x_N^-}) . Alignment and Uniformity Wang and Isola showed that the contrastive loss (specifically the InfoNCE form) encourages two simple properties of the embeddings: alignment and uniformity. We have",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f4756505f7a018b43df6380a6c99e520"
+  },
+  "chunk-7cce828183eb520facdf138e8990dad6": {
+    "tokens": 77,
+    "content": "7: Making custom classifiers using CLIP. (a) Image embeddings in joint embedding space, (b) triangle-circle classifier, (c) purple-teal classifier, and (d) arrowhead-ball classifier. It’s a bit like a modern astrolabe where you turn dials to read off the prediction of interest. CLIP Paper Edit this page View source Report an issue",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7cce828183eb520facdf138e8990dad6"
+  },
+  "chunk-c89dcb0ccedaa26a07f86fea9098be0f": {
+    "tokens": 126,
+    "content": "architecture for Rebeca consists of several key components: User Interface (UI): you need to use a chat application and you can choose any chat interface of your liking provided you use it only for the text input and answer output. For example OpenWebUI may have a RAG interfacing capability but you are not allowed to use that. You are also not allowed to use AI browsers recently introduced by Perplexity (Comet), OpenAI and others. LLM Server: The chat should be able to connect to a local Ollama or LM Studio server instance and be configured to use the qwen2.5 model.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c89dcb0ccedaa26a07f86fea9098be0f"
+  },
+  "chunk-cfbbffe94e6225bcf5568fe62c9c2cc2": {
+    "tokens": 151,
+    "content": "grayscale—as two different views of the total data tensor \\(\\mathbf{X}\\) , just like we did in the previous sections: \\(\\mathbf{x} = V_1(\\mathbf{X})\\) , \\(\\mathbf{y} = V_1(\\mathbf{X})\\) . You can think of these views either as resulting from sensory co-occurrences or as two transformations of \\(\\mathbf{X}\\) , where the transformation in the color example is channel dropping. Thus, the two kinds of contrastive learning we have presented are really one and the same: any two signals can be considered transformations of a combined total signal, and any signal and its transformation can be considered two co-occurring ways of measuring the underlying",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-cfbbffe94e6225bcf5568fe62c9c2cc2"
+  },
+  "chunk-de442a5e4162d7683f6a2442131b7161": {
+    "tokens": 154,
+    "content": "embedding. \\[\\hat v_i = \\sum_{j=1}^T \\alpha_{ij} v_j\\] where \\(\\alpha_{ij}\\) is the attention weight of the \\(j-th\\) token of the input sequence for the \\(i-th\\) value of the input sequence of length T. What purpose the values play though and why the \\(W^v\\) matrix ? The values are the actual information that the input token will use to update its embedding. The \\(W^v\\) matrix is used to project the input tokens to values (points) in a \\(d_v\\) dimensional space. There is no reason to make the dimensionality of the value space the same as the dimensionality of the key space but",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-de442a5e4162d7683f6a2442131b7161"
+  },
+  "chunk-b77262a3de9a6d6e981c721571e4a28f": {
+    "tokens": 110,
+    "content": "world. These assertions are called sentences and are expressed in a knowledge representation language that is used to build a Knowledge Base (KB) - a concept central to AI. The KB starts with prior knowledge about the domain and problem at hand and incrementally is updated with the output of the probabilistic reasoning subsystem. Lets see a concrete example as described in the figure below, Imagine that the agent is a security robot at an airport and is moving around that environment. The problem it tries to solve is to identify an abandoned backpack / luggage. Despite the simplicity of",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b77262a3de9a6d6e981c721571e4a28f"
+  },
+  "chunk-b0b14070bcd3ef6a571246548a4ac62f": {
+    "tokens": 151,
+    "content": "we may use a loss of the form \\(\\left\\lVert f(T(\\mathbf{x}))-f(\\mathbf{x})\\right\\rVert_2^2\\) to learn an encoder \\(f\\) that is invariant to \\(T\\) . We call such a loss an alignment loss ( wang2020hypersphere? ) . That seems easy enough, but you may have noticed a flaw: What if \\(f\\) just learns to output the zero vector all the time? Trivial alignment can be achieved when there is representational collapse, and all datapoints get mapped to the same arbitrary vector. Contrastive learning fixes this issue by coupling an alignment loss with a second loss that pushes apart embeddings of datapoints for which we",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b0b14070bcd3ef6a571246548a4ac62f"
+  },
+  "chunk-0a08d89c1355e1c044e0e440a79726b5": {
+    "tokens": 119,
+    "content": "Figure 5: CLIP ( radford2021learning? ) joint embedding Using language as one of the views may seem like a minor variation on the contrastive methods we saw previously, but it’s a change that opens up a lot of new possibilities. CLIP connects the domain of images to the domain of language. This means that many of the powerful abilities of language become applicable to imagery as well. One ability that the CLIP paper showcased is making a novel image classifier on the fly. With language, you can describe a new conceptual category with ease. Suppose I want a classifier to",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0a08d89c1355e1c044e0e440a79726b5"
+  },
+  "chunk-347ee1cddb180db47da74eed2ab0a716": {
+    "tokens": 153,
+    "content": "embedding (across the \\(d\\) dimensions) than others when it calculates the query and key vectors. Lets now proceed with the evolved dot product that now is done at the query-key \\(d_q = d_k\\) space. “The hiking trail led us through bear country.” where \\(T=8\\) Now that we have projected the tokens in their new space we can form the generalized dot product \\[(W^qx_i)^TW^kx_j = x_i^T (W^q)^TW^kx_j=x_i^TWx_j\\] Geometrically you can visualize this as shown below: After training the keys that can the most to change the query will end up close to it . The actual change of the query is",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-347ee1cddb180db47da74eed2ab0a716"
+  },
+  "chunk-301d9df64cefccac5cd2ea7387e7e7e1": {
+    "tokens": 110,
+    "content": "The central question that one can pose now is this: Since the location of the token seems highly correlated with its function, as captured by the language patterns above, how can we help the embedding mapping become location aware and function aware ? Linear transformation of the input embeddings This is done by projecting the input embeddings using a projection matrix \\(W\\) obtaining a new coordinate system whose axes can be associated with object, verb, subject, adjective etc. The semantic meaning of such new coordinate system is not necessary to be explicitly defined but it helps understand what this projection",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-301d9df64cefccac5cd2ea7387e7e7e1"
+  },
+  "chunk-a9d25ca1f54266a4aaf1d699e09c517a": {
+    "tokens": 195,
+    "content": "as subject-verb-object, subject-verb-adjective-subject, and subject-verb-adverb-object. This is just an analogy though and it could be valid in the first few blocks of the transformer. Think of the multiple heads in transformer architectures to be analogous to the multiple filters we use in CNNs. if \\(H\\) is the number of heads, indexed by \\(h\\) , then each head delivers \\[H_h = \\mathtt{Attention}(Q_h, K_h, Vh)\\] where \\(Q_h, K_h, V_h\\) are the query, key and value matrices of the \\(h-th\\) head. \\[Q_h = X W_h^q\\] \\[K_h = X W_h^k\\] \\[V_h = X W_h^v\\] where \\(W_h^q, W_h^k, W_h^v\\) are the weight matrices of the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a9d25ca1f54266a4aaf1d699e09c517a"
+  },
+  "chunk-e9e7ba0fb34435e911b0281111211377": {
+    "tokens": 200,
+    "content": "becomes true and at(p, loc-from) becomes false. In PDDL: (:action fly-airplane :parameters (?airplane - airplane ?loc-from - airport ?loc-to - airport) :precondition (at ?airplane ?loc-from) :effect (and (not (at ?airplane ?loc-from)) (at ?airplane ?loc-to)) ) Drive-truck Operator Action/Operator : Description : Drive truck truck from a location loc-from to a location loc-to , Precondition : at(truck, loc-from) must be true, Effect : at(truck, loc-to) becomes true and at(truck, loc-from) becomes false. In PDDL: (:action drive-truck :parameters (?truck - truck ?loc-from - place ?loc-to - place ?city - city) :precondition (and (at ?truck ?loc-from) (in-city ?loc-from ?city) (in-city ?loc-to ?city)) :effect",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e9e7ba0fb34435e911b0281111211377"
+  },
+  "chunk-6c85be8710612842ec863979cc7071a9": {
+    "tokens": 171,
+    "content": "1 . Also notice that \\(f_\\ell\\) and \\(f_t\\) both output unit vectors (which is achieved using \\(L_2\\) -normalization before computing the objective); this ensures that the denominator cannot dominate by pushing negative pairs infinitely far apart. The idea of visual learning by image captioning actually has a long history before CLIP. One important early paper on this topic is ( ordonez2011im2text? ) . Figure 3 visually depicts how CLIP is trained. First we sample a batch of \\(N\\) language-image pairs, \\(\\{\\mathbf{t}^{(i)}, \\boldsymbol\\ell^{(i)}\\}_{i=1}^N\\) ( \\(N=6\\) in the figure). Next we embed measure the dot product between all these text strings and",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-6c85be8710612842ec863979cc7071a9"
+  },
+  "chunk-f456c60741a8df08ea5f30211703f33b": {
+    "tokens": 116,
+    "content": "the input sequence and \\(d_v\\) is the dimension of the value vectors. The dimensions of the tensors can also be extended to accommodate the batch dimension. Important Its worthwhile highlighting the difference between a dense layer and the self-attention mechanism. In a dense layer, if the layer learns to apply eg a very small weight at the input, it does so for all data that are fed into the layer. In the self-attention mechanism if one of the attention weights is for example very small, this is purely due to the specific data being present at that moment. Example An",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f456c60741a8df08ea5f30211703f33b"
+  },
+  "chunk-3d51ce3fbf4b4cbff3abd80c83b13839": {
+    "tokens": 141,
+    "content": "sound for that same scene. Or, returning to our colorization example, we can learn an image representation where the embedding of the grayscale channels matches the embedding of the color channels. In both these cases we are learning to align co-occurring sensory signals. This kind of contrastive learning is schematized in Figure 2 . Figure 2: Contrastive learning from multiple views of the data. Figure inspired by \\cite{tian2020contrastive In Figure 2 , we refer to the two co-occurring signals—color and grayscale—as two different views of the total data tensor \\(\\mathbf{X}\\) , just like we did in the previous sections: \\(\\mathbf{x}",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3d51ce3fbf4b4cbff3abd80c83b13839"
+  },
+  "chunk-b85eb0621a346e492e81a88a6d9f5d88": {
+    "tokens": 118,
+    "content": "of answering questions, providing explanations, and assisting with learning. In this assignment we have picked the Introduction to AI as the course since we have a critical mass of material (videos, slides, web site with links to papers). In its full implementation Erica will be able to see you, hear you and talk to you. However, for the purpose of this project and knowing how constrained student computers are, we will focus on text-based interactions only. System Architecture The system architecture for Rebeca consists of several key components: User Interface (UI): you need to use a chat application and you",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-b85eb0621a346e492e81a88a6d9f5d88"
+  },
+  "chunk-e44b4ecdca26910eec0b2588bec56464": {
+    "tokens": 86,
+    "content": "of our knowledge (minus military applications we don’t know) this is the largest deployment of logical reasoning technology to this day. AWS re:Inforce 2019: The Evolution of Automated Reasoning Technology at AWS Still to learn the value of logical reasoning you need to go to simpler domains / worlds than scene analytics and cloud networking - world models that are simple and instructive. World Models Edit this page View source Report an issue",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e44b4ecdca26910eec0b2588bec56464"
+  },
+  "chunk-2f642986e3cd0cdd9951f94adfb0f5eb": {
+    "tokens": 147,
+    "content": "tightness of the ELBO bound As the figure above shows \\(KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta))\\) represents the tightness of the ELBO \\(\\mathcal L(q, \\phi, \\theta)\\) since the closest the approximation becomes the smaller the gap between ELBO and the log likelihood. Maximizing the ELBO withe respect to \\((\\phi, \\theta)\\) will achieve “two birds with one stone” situation: it will maximize the marginal log likelihood that is used for data generation and minimize the KL divergence improving the approximation in the encoder. On top of that, the ELBO allows joint optimization with",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2f642986e3cd0cdd9951f94adfb0f5eb"
+  },
+  "chunk-114ad13da3f029831d24b941874b57f7": {
+    "tokens": 117,
+    "content": "task is to predict the right side of an image from its left side. In fact, several of the examples we gave previously for predictive learning are of the self-supervised variety: supervision for predicting a future frame, or a next pixel, can be cooked up just by splitting a video into past and future frames, or splitting an image into previous and next pixels in a raster-order sequence. Contrastive Learning Dimensionality reduction and clustering algorithms learn compressed representations by creating an information bottleneck , that is, by constraining the number of bits available in the representation. An alternative compression strategy",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-114ad13da3f029831d24b941874b57f7"
+  },
+  "chunk-10dbddedac13c53187f19bbcb3156378": {
+    "tokens": 149,
+    "content": "= - sum_ z q( z |  x ;  phi) log fracp( z |  x;  theta))p( z |  x ;  phi)] [= - sum_ z q( z |  x ;  phi) log fracfracp( z ,  x;  theta))p( x)q( z |  x ;  phi) = - sum_ z q( z |  x ;  phi) log Big[ fracp( z ,  x;  theta))q( z |  x ;  phi) frac1p( x)Big]] [=- sum_ z q( z |  x ;  phi) Big[ log fracp( z",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-10dbddedac13c53187f19bbcb3156378"
+  },
+  "chunk-bbe1fa761a3018b797f95e8931d7781d": {
+    "tokens": 121,
+    "content": "that are close to each other in the embedding space. So we have seen evidence that a projection with proper weights can cause all sorts of interesting mappings to happen from a large dimensional space to a lower space. By analogy, the multiplication of the matrix \\(W^q\\) with the input token embedding will create a vector (a point) in the d_k dimensional space that will represent the query. Similarly the multiplication of the matrix \\(W^k\\) with each and every input token embedding will create vectors (a point) in the d_k dimensional space that will represent the keys. After training the",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-bbe1fa761a3018b797f95e8931d7781d"
+  },
+  "chunk-8bc421b898b6041eb7dcfd0da88e707a": {
+    "tokens": 118,
+    "content": "in the initial state there is a truck in Paris airport. An airplane and two packages are in London airport. Paris has two places : south and north. The goal is to have one package in the north location and the other one in the south location. Defining the Domain Let start by defining in the file logistics.pddl the domain and its components : the requirements, the types, the predicates, the actions or the operators. First, we have to define the name of the domain: In PDDL, we write : (define (domain logistics) Requirements The requirements for this logistics example",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8bc421b898b6041eb7dcfd0da88e707a"
+  },
+  "chunk-5edf01cab6c5efd1ae75e8d20f662d03": {
+    "tokens": 141,
+    "content": "embeddings. This figure is generated in the same way as ?@fig-neural_nets-vit_mapping_plot : for each encoder we reduce dimensionality for visualization using t-distributed Stochastic Neighbor Embedding ( t-SNE ) ( tsne? ) . For the image encoder, we show the visual content using icons to reflect the color and shape depicted in the image (we previously used the same visualization in ?@sec-representation_learning-expt_designing_embeddings_with_contrastive_learning ). It’s a bit hard to see, but one thing you can notice here is that for the image encoder, the early layers group images by color and the later layers group more by shape. The opposite is true",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5edf01cab6c5efd1ae75e8d20f662d03"
+  },
+  "chunk-f9c25475041383298d36cd42b4c4750c": {
+    "tokens": 137,
+    "content": "all other possible pairings within the batch. Inspired by figure 1 of \\cite{radford2021learning After training, we have a text encoder \\(f_t\\) and an image encoder \\(f_\\ell\\) that map to the same embedding space. In this space, the angle between a text embedding and an image embedding will be small if the text matches the matches. The dot product between unit vectors is proportional to the angle between the vectors. Figure 4 shows how a trained CLIP model maps data to embeddings. This figure is generated in the same way as ?@fig-neural_nets-vit_mapping_plot : for each encoder we reduce dimensionality for visualization",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f9c25475041383298d36cd42b4c4750c"
+  },
+  "chunk-34a74edcbc6d7e678b64dc5b04afded5": {
+    "tokens": 184,
+    "content": "- \\sum_{\\mathbf x} q(\\mathbf x) \\log \\frac{p(\\mathbf x)}{q(\\mathbf x)}\\] We will use KL divergence to obtain a suitable loss function that will be used in the optimization of this approximation via the \\(DNN_{enc}\\) network. Ultimately we are trying to minimize the KL divergence between the true posterior \\(p(\\mathbf z| \\mathbf x ; \\mathbf \\theta)\\) and the approximate posterior \\(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi)\\) \\[KL(q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) || p(\\mathbf z | \\mathbf \\theta)) = - \\sum_{\\mathbf z} q(\\mathbf z | \\mathbf x ; \\mathbf \\phi) \\log \\frac{p(\\mathbf z | \\mathbf x; \\mathbf \\theta))}{p(\\mathbf",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-34a74edcbc6d7e678b64dc5b04afded5"
+  }
+}

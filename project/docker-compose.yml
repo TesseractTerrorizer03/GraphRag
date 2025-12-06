@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  graphrag-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile            
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION:-3.11}
+        PUID: ${PUID:-1000}
+        PGID: ${PGID:-1000}
+    container_name: graphrag-dev
+    environment:
+      - WORKSPACE_DIR=${WORKSPACE_DIR:-/workspace/project}
+      - VIRTUAL_ENV=${VIRTUAL_ENV:-/workspace/.venv}
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
+    ports:
+      - "${DEV_PORT:-8000}:8000"          # change if your app listens on another port
+      - "${JUPYTER_PORT:-8888}:8888"      # optional; remove if not needed
+    volumes:
+      - .:${WORKSPACE_DIR:-/workspace/project}   # mount the project directory
+      - ${VENV_CACHE:-./.venv_cache}:/workspace/.venv  # optional persistent venv cache
+    working_dir: ${WORKSPACE_DIR:-/workspace/project}
+    stdin_open: true
+    tty: true
+    command: bash -c "tail -f /dev/null"  # keep the container running for interactive exec
+    networks:
+      - graphrag-network
+
+networks:
+  graphrag-network:
+    driver: bridge

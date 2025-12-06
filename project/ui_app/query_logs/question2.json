@@ -1,0 +1,392 @@
+{
+  "question_number": 2,
+  "question": "What is CLIP and how it is used in computer vision applications ?",
+  "result": {
+    "answer": "### Answer\n\nCLIP (Contrastive Language-Image Pre-training) is a method used for pretraining models in computer vision tasks, specifically focusing on understanding relationships between textual descriptions and visual images. CLIP comprises two encoders: one for text inputs, often called \\(f_t\\), and another for image inputs denoted as \\(f_\\ell\\). These encoders are trained to map both types of data into a shared embedding space.\n\nDuring the training process, CLIP utilizes contrastive loss\u2014a type of loss function that encourages similar items (text descriptions paired with visually relevant images) to have close embeddings while pushing dissimilar pairs apart. The key mathematical operation here involves computing the dot product between two vectors representing text and image features in the same embedding space. This is achieved using the cosine similarity formula:\n\n\\[ \\text{Cosine Similarity} = \\frac{\\mathbf{A} \\cdot \\mathbf{B}}{\\|\\mathbf{A}\\| \\times \\|\\mathbf{B}\\|}, \\]\n\nwhere \\( \\mathbf{A} \\) and \\( \\mathbf{B} \\) are vectors representing the text and image embeddings, respectively. High similarity scores imply that text and image descriptions refer to visually similar content.\n\nTo illustrate this concept with a code example in Python:\n\n```python\nimport torch\n\ndef cosine_similarity(text_embedding, img_embedding):\n    \"\"\"\n    Calculate cosine similarity between two vector representations.\n    \n    Parameters:\n        text_embedding (torch.Tensor): Text embedding of shape (embedding_dim).\n        img_embedding (torch.Tensor): Image embedding of shape (embedding_dim).\n        \n    Returns:\n        float: Cosine similarity score indicating the similarity between text and image embeddings.\n    \"\"\"\n    dot_product = torch.dot(text_embedding, img_embedding)\n    norm_text = torch.norm(text_embedding)\n    norm_img = torch.norm(img_embedding)\n\n    cosine_similarity_score = dot_product / (norm_text * norm_img.item())\n    return cosine_similarity_score\n\n# Assuming we have trained encoders f_t and f_\\ell to produce embeddings\ntext_embedding = torch.tensor([0.1, 0.2, ..., embedding_dim]) # Sample text embedding vector\nimg_embedding = torch.tensor([0.3, 0.4, ..., embedding_dim]) # Sample image embedding vector\n\nsimilarity_score = cosine_similarity(text_embedding, img_embedding)\nprint(f\"Cosine Similarity Score: {similarity_score}\")\n```\n\n### Knowledge Graph Nodes Used:\n\n1. CLIP ( radford2021learning? )\n2. Contrastive Language-Image Pretraining (CLIP) ( clip)\n3. Contrastive Loss\n4. Dot Product Operation\n5. Cosine Similarity Formula\n\n### Practice Questions:\n\n1. Given two text embeddings \\( \\text{Text}^T = [t_1, t_2, ..., t_{embedding\\_dim}] \\) and an image embedding \\( Image = [i_1, i_2, ..., i_{embedding\\_dim}] \\), calculate the cosine similarity between them.\n2. Explain how CLIP architecture combines text encoder \\( f_t \\) and image encoder \\( f_\\ell \\) to form a joint representation of images and texts during training.",
+    "used_concepts": [
+      "\"QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?\"",
+      "\"CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)\"",
+      "\"CLIP ARCHITECTURE\"",
+      "\"CLIP\"",
+      "\"CLIP MODEL\""
+    ],
+    "references": [
+      {
+        "concept": "QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?",
+        "evidence": "vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What is CLIP and how it is used in computer vision applications ? We expect to see a response that explains encoders for text and image, the principle of contrastive loss, the dot product operation and how one-shot classification\u2026"
+      },
+      {
+        "concept": "CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)",
+        "evidence": "Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On\u2026"
+      },
+      {
+        "concept": "CLIP ARCHITECTURE",
+        "evidence": "of the embeddings. See theorem 1 in ( wang2020hypersphere? ) for a formal statement of this fact. A result of this analysis is we may explicit decompose contrastive learning into one loss for alignment and another for uniformity, with the following forms: \\[\\begin{aligned} \\mathcal{L}_{\\texttt{align}}(f;\\alpha) &=\u2026"
+      },
+      {
+        "concept": "CLIP",
+        "evidence": "Figure 5: CLIP ( radford2021learning? ) joint embedding Using language as one of the views may seem like a minor variation on the contrastive methods we saw previously, but it\u2019s a change that opens up a lot of new possibilities. CLIP connects the domain of images to the domain of language. This means that many of the powerful abilities of language\u2026"
+      },
+      {
+        "concept": "CLIP MODEL",
+        "evidence": "all other possible pairings within the batch. Inspired by figure 1 of \\cite{radford2021learning After training, we have a text encoder \\(f_t\\) and an image encoder \\(f_\\ell\\) that map to the same embedding space. In this space, the angle between a text embedding and an image embedding will be small if the text matches the matches. The dot product\u2026"
+      }
+    ],
+    "subgraphs": [
+      {
+        "concept_id": "\"QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?\"",
+        "concept_meta": {
+          "entity_type": "\"QUESTION\"",
+          "description": "\"This question seeks an explanation of CLIP, focusing on its application in computer vision tasks. The expected response should cover encoders for text and image inputs, the concept of contrastive loss, the dot product operation, and one-shot classification achieved by CLIP.\"",
+          "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"ANSWER\""
+        ],
+        "resources": [
+          "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?\"": {
+            "entity_type": "\"QUESTION\"",
+            "description": "\"This question seeks an explanation of CLIP, focusing on its application in computer vision tasks. The expected response should cover encoders for text and image inputs, the concept of contrastive loss, the dot product operation, and one-shot classification achieved by CLIP.\"",
+            "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+          },
+          "\"ANSWER\"": {
+            "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1",
+            "description": "\"This question seeks an explanation of the CLIP model's usage in computer vision tasks, including its encoders for text and images, contrastive loss, dot product operation, and one-shot classification.\"",
+            "entity_type": "\"UNKNOWN\""
+          },
+          "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1": {
+            "title": "source snippet for QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?",
+            "text": "vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What is CLIP and how it is used in computer vision applications ? We expect to see a response that explains encoders for text and image, the principle of contrastive loss, the dot product operation and how one-shot classification can be achieved with CLIP . Question 3: Can you\u2026",
+            "source": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?\"",
+            "target": "\"ANSWER\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1",
+            "target": "\"QUESTION 2: WHAT IS CLIP AND HOW IT IS USED IN COMPUTER VISION APPLICATIONS?\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"CLIP is a method that pretrains models to understand and match relationships between textual descriptions and visual images.\"",
+          "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+        },
+        "prereqs": [],
+        "siblings": [],
+        "resources": [
+          "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"CLIP is a method that pretrains models to understand and match relationships between textual descriptions and visual images.\"",
+            "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          },
+          "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5": {
+            "title": "source snippet for CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)",
+            "text": "Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On this page Self-supervised Learning Contrastive\u2026",
+            "source": "chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          }
+        },
+        "edges": [
+          {
+            "source": "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5",
+            "target": "\"CONTRASTIVE LANGUAGE-IMAGE PRETRAINING (CLIP)\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"CLIP ARCHITECTURE\"",
+        "concept_meta": {
+          "entity_type": "\"CONCEPT\"",
+          "description": "\"CLIP is a specific architecture used in the pretext task idea to create scene representations based on natural language supervision.\"<SEP>\"The CLIP Architecture refers to the structure used here as part of a method or system and not necessarily an identifiable 'organization' or 'person', therefore being more like a concept or technique rather than fitting into one of the provided categories.\"",
+          "source_id": "chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93",
+          "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"CONTRASTIVE LEARNING\"",
+          "\"CONTRASTIVE METHOD\"",
+          "\"PRETEXT TASK IDEA\"",
+          "\"VISUAL VIEWS\"",
+          "\"LINGUISTIC VIEWS\"",
+          "\"HYPERPARAMETERS\""
+        ],
+        "resources": [
+          "chunk::chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"CLIP ARCHITECTURE\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"CLIP is a specific architecture used in the pretext task idea to create scene representations based on natural language supervision.\"<SEP>\"The CLIP Architecture refers to the structure used here as part of a method or system and not necessarily an identifiable 'organization' or 'person', therefore being more like a concept or technique rather than fitting into one of the provided categories.\"",
+            "source_id": "chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "\"CONTRASTIVE LEARNING\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"A machine learning technique that trains models by comparing similar inputs (positive pairs) with dissimilar ones to learn invariant representations.\"<SEP>\"A method used in machine learning which encourages the learning of representations by contrasting positive pairs with negative ones.\"<SEP>\"Contrastive learning involves leveraging co-occurring views (like images with their descriptions) to learn representations by maximizing the similarity between related data points while minimizing that for dissimilar ones.\"<SEP>\"Contrastive learning involves using positive and negative pairs to learn feature representations that distinguish between similar (positive) and different (negative) data points.\"<SEP>\"Contrastive learning maps similar datapoints to similar embeddings and is more closely related to clustering.\"<SEP>\"Contrastive learning represents an alternative strategy that focuses on making representations invariant to certain transformations, allowing for efficient information extraction and compression.\"<SEP>\"The process of contrastive learning involves using different transformations or views of a single data tensor as a way to measure similarities and differences.\"<SEP>\"Contrastive Learning is an alternative training technique used to ensure that similar data points have close embeddings, helping counteract representational collapse.\"<SEP>\"Contrastive learning\" is a machine learning technique which aims to learn representations by distinguishing between similar and dissimilar examples.\"<SEP>\"The concept of contrastive learning involves aligning co-occurring sensory signals, as shown in Figure 2.\"<SEP>\"A method used to learn representations from unlabelled data by contrasting similarities within the same class with differences between classes.\"<SEP>\"Contrastive Learning is a dimensionality reduction technique that learns compressed representations by emphasizing differences between similar data points.\"",
+            "source_id": "chunk-c0d666dc2b38320dbc3e9ac039241910<SEP>chunk-114ad13da3f029831d24b941874b57f7<SEP>chunk-b0b14070bcd3ef6a571246548a4ac62f<SEP>chunk-cfbbffe94e6225bcf5568fe62c9c2cc2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93<SEP>chunk-3d51ce3fbf4b4cbff3abd80c83b13839<SEP>chunk-124fbb1b8e31d8533b54ab785a1c693b<SEP>chunk-575b5e50472741efa7a02966c34ea787<SEP>chunk-5edf01cab6c5efd1ae75e8d20f662d03",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 23}, {\"level\": 2, \"cluster\": 61}]"
+          },
+          "\"CONTRASTIVE METHOD\"": {
+            "source_id": "chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "description": "\"CLIP employs contrastive learning from co-occurring visual and linguistic views, specifically utilizing text descriptions of images as the supervisory signal.\"",
+            "entity_type": "\"UNKNOWN\"",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "\"PRETEXT TASK IDEA\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"The pretext task idea is a strategy where unsupervised data is used for a specific task in order to learn useful representations.\"",
+            "source_id": "chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "\"VISUAL VIEWS\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"Visual views refer to the data representations that are used alongside textual descriptions in CLIP's method of learning representations through contrastive supervision.\"",
+            "source_id": "chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "\"LINGUISTIC VIEWS\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"Linguistic views encompass the text or captions that accompany and describe the visual inputs in CLIP, serving as a supervisory signal during the learning process.\"",
+            "source_id": "chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "\"HYPERPARAMETERS\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"The hyperparameters \\( \\alpha \\), \\( t \\), and \\( \\lambda \\) are used to tune the losses in machine learning models.\"",
+            "source_id": "chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 26}]"
+          },
+          "chunk::chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93": {
+            "title": "source snippet for CLIP ARCHITECTURE",
+            "text": "of the embeddings. See theorem 1 in ( wang2020hypersphere? ) for a formal statement of this fact. A result of this analysis is we may explicit decompose contrastive learning into one loss for alignment and another for uniformity, with the following forms: \\[\\begin{aligned} \\mathcal{L}_{\\texttt{align}}(f;\\alpha) &= \\mathbb{E}_{(\\mathbf{x},\\mathbf{x}^+) \\sim p_{\\texttt{pos}}} [\\left\\lVert\u2026\n\npairs and \\(\\alpha\\) , \\(t\\) , and \\(\\lambda\\) are hyperparameters of the losses. CLIP Architecture Here, we use the pretext task idea on a supervisory signal of the natural language to create a representation of the scene it describes. CLIP is a contrastive method (see ?@sec-representation_learning-contrastive_learning ) in which one data view is the image and the other is a caption describing\u2026",
+            "source": "chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"CONTRASTIVE LEARNING\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"CONTRASTIVE METHOD\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"PRETEXT TASK IDEA\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"VISUAL VIEWS\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"LINGUISTIC VIEWS\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP ARCHITECTURE\"",
+            "target": "\"HYPERPARAMETERS\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-71e7394bf92a7151b6b24f6089eb88b2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93",
+            "target": "\"CLIP ARCHITECTURE\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"CLIP\"",
+        "concept_meta": {
+          "entity_type": "\"EVENT\"",
+          "description": "\"CLIP appears to be a specific event, project, or study that involves connecting image domains with language domains.\"<SEP>\"CLIP connects domains of images and language, enhancing the applicability of language-based abilities to imagery.\"<SEP>\"CLIP is an organization associated with custom classifiers development and possibly research paper publication.\"<SEP>CLIP (Contrastive Language-Image Pre-training) is a pre-trained model specifically designed for computer vision applications. It employs encoders for both text and images, utilizing contrastive loss and the dot product to achieve one-shot classification. The organization or project aims to optimize dot products between text and image encodings, enabling powerful language abilities to be transferred onto imagery. CLIP functions as a framework for contrastive language-image pretraining aimed at engineering AI agents, connecting domains of images and language. It provides tools for making custom binary classifiers using image embeddings, facilitating the creation of custom classifiers through joint embedding space and geometric shape-based methods. CLIP connects domains like images and language, enabling applications in both domains by providing capabilities previously unavailable in imagery. Additionally, it can be considered an organization that specializes in connecting domains of images and language, develops custom classifiers using its methods and paper, offers tools for creating custom binary classifiers with image embeddings, likely related to research papers or software libraries focused on image captioning and text-image retrieval tasks.<SEP>\"CLIP connects the domain of images to the domain of language.\"<SEP>\"CLIP is described as a tool or framework used for making custom classifiers, implying it has capabilities in machine learning or AI applications.\"<SEP>\"CLIP is an organization or project that makes custom classifiers using the joint embedding space and triangle-circle classifier, among others.\"<SEP>\"CLIP is an organization or system that connects images and language domains.\"<SEP>\"CLIP is described as a tool or framework for making custom classifiers, likely used in machine learning context.\"<SEP>\"CLIP is an idea behind visual learning by image captioning, which has a history dating back to previous research.\"",
+          "source_id": "chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9",
+          "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"USES INSPIRATION FROM\"",
+          "\"COMPUTER VISION APPLICATIONS\"",
+          "\"RADFORD2021LEARNING\"",
+          "\"CONTRASTIVE LEARNING\"",
+          "\"MAKING CUSTOM CLASSIFIERS USING CLIP\"",
+          "\"CLASS $A$ \""
+        ],
+        "resources": [
+          "chunk::chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"CLIP\"": {
+            "entity_type": "\"EVENT\"",
+            "description": "\"CLIP appears to be a specific event, project, or study that involves connecting image domains with language domains.\"<SEP>\"CLIP connects domains of images and language, enhancing the applicability of language-based abilities to imagery.\"<SEP>\"CLIP is an organization associated with custom classifiers development and possibly research paper publication.\"<SEP>CLIP (Contrastive Language-Image Pre-training) is a pre-trained model specifically designed for computer vision applications. It employs encoders for both text and images, utilizing contrastive loss and the dot product to achieve one-shot classification. The organization or project aims to optimize dot products between text and image encodings, enabling powerful language abilities to be transferred onto imagery. CLIP functions as a framework for contrastive language-image pretraining aimed at engineering AI agents, connecting domains of images and language. It provides tools for making custom binary classifiers using image embeddings, facilitating the creation of custom classifiers through joint embedding space and geometric shape-based methods. CLIP connects domains like images and language, enabling applications in both domains by providing capabilities previously unavailable in imagery. Additionally, it can be considered an organization that specializes in connecting domains of images and language, develops custom classifiers using its methods and paper, offers tools for creating custom binary classifiers with image embeddings, likely related to research papers or software libraries focused on image captioning and text-image retrieval tasks.<SEP>\"CLIP connects the domain of images to the domain of language.\"<SEP>\"CLIP is described as a tool or framework used for making custom classifiers, implying it has capabilities in machine learning or AI applications.\"<SEP>\"CLIP is an organization or project that makes custom classifiers using the joint embedding space and triangle-circle classifier, among others.\"<SEP>\"CLIP is an organization or system that connects images and language domains.\"<SEP>\"CLIP is described as a tool or framework for making custom classifiers, likely used in machine learning context.\"<SEP>\"CLIP is an idea behind visual learning by image captioning, which has a history dating back to previous research.\"",
+            "source_id": "chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+          },
+          "\"USES INSPIRATION FROM\"": {
+            "source_id": "chunk-b51c9e3439fc588a037c55333c86c6cf",
+            "description": "\"CLIP leverages concepts and insights from Figure 1 of the Radford2021Learning reference for training methodologies.\"",
+            "entity_type": "\"UNKNOWN\"",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+          },
+          "\"COMPUTER VISION APPLICATIONS\"": {
+            "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1",
+            "description": "\"CLIP is specifically used for computer vision tasks that involve both text and image inputs. It leverages contrastive loss and the dot product operation for one-shot classification.\"",
+            "entity_type": "\"UNKNOWN\"",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+          },
+          "\"RADFORD2021LEARNING\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Radford2021Learning refers to a paper or organization that influenced the CLIP project, as indicated by its reference in the text.\"<SEP>\"radford2021learning is likely a reference to an individual involved with CLIP, possibly Radford or another researcher associated with this work.\"<SEP>\"The event refers to a paper or study named 'Learning with Radford2021', which focuses on the CLIP organization.\"<SEP>\"radford2021learning refers to a specific individual associated with or involved in CLIP development or publication.\"<SEP>\"radford2021learning seems to be an organization related to the field of learning and possibly research in computer vision or machine learning.\"",
+            "source_id": "chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-0a08d89c1355e1c044e0e440a79726b5",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+          },
+          "\"CONTRASTIVE LEARNING\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"A machine learning technique that trains models by comparing similar inputs (positive pairs) with dissimilar ones to learn invariant representations.\"<SEP>\"A method used in machine learning which encourages the learning of representations by contrasting positive pairs with negative ones.\"<SEP>\"Contrastive learning involves leveraging co-occurring views (like images with their descriptions) to learn representations by maximizing the similarity between related data points while minimizing that for dissimilar ones.\"<SEP>\"Contrastive learning involves using positive and negative pairs to learn feature representations that distinguish between similar (positive) and different (negative) data points.\"<SEP>\"Contrastive learning maps similar datapoints to similar embeddings and is more closely related to clustering.\"<SEP>\"Contrastive learning represents an alternative strategy that focuses on making representations invariant to certain transformations, allowing for efficient information extraction and compression.\"<SEP>\"The process of contrastive learning involves using different transformations or views of a single data tensor as a way to measure similarities and differences.\"<SEP>\"Contrastive Learning is an alternative training technique used to ensure that similar data points have close embeddings, helping counteract representational collapse.\"<SEP>\"Contrastive learning\" is a machine learning technique which aims to learn representations by distinguishing between similar and dissimilar examples.\"<SEP>\"The concept of contrastive learning involves aligning co-occurring sensory signals, as shown in Figure 2.\"<SEP>\"A method used to learn representations from unlabelled data by contrasting similarities within the same class with differences between classes.\"<SEP>\"Contrastive Learning is a dimensionality reduction technique that learns compressed representations by emphasizing differences between similar data points.\"",
+            "source_id": "chunk-c0d666dc2b38320dbc3e9ac039241910<SEP>chunk-114ad13da3f029831d24b941874b57f7<SEP>chunk-b0b14070bcd3ef6a571246548a4ac62f<SEP>chunk-cfbbffe94e6225bcf5568fe62c9c2cc2<SEP>chunk-89614d99cc7b78ccf3cdf366b2958e93<SEP>chunk-3d51ce3fbf4b4cbff3abd80c83b13839<SEP>chunk-124fbb1b8e31d8533b54ab785a1c693b<SEP>chunk-575b5e50472741efa7a02966c34ea787<SEP>chunk-5edf01cab6c5efd1ae75e8d20f662d03",
+            "clusters": "[{\"level\": 0, \"cluster\": 3}, {\"level\": 1, \"cluster\": 23}, {\"level\": 2, \"cluster\": 61}]"
+          },
+          "\"MAKING CUSTOM CLASSIFIERS USING CLIP\"": {
+            "source_id": "chunk-b25dc470d4dceaa95b3e0266dadabbd0",
+            "description": "\"CLIP enables users to create custom binary classifiers by partitioning the space in more ways.\"",
+            "entity_type": "\"UNKNOWN\"",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 32}, {\"level\": 2, \"cluster\": 62}, {\"level\": 3, \"cluster\": 64}]"
+          },
+          "\"CLASS $A$ \"": {
+            "source_id": "chunk-3c385930ab22525d66741119eb336bad",
+            "description": "\"The CLIP model constructs a classifier for 'class $a$', by comparing text descriptions with the query image embedding.\"",
+            "entity_type": "\"UNKNOWN\"",
+            "clusters": "[{\"level\": 0, \"cluster\": 4}, {\"level\": 1, \"cluster\": 34}]"
+          },
+          "chunk::chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9": {
+            "title": "source snippet for CLIP",
+            "text": "Figure 5: CLIP ( radford2021learning? ) joint embedding Using language as one of the views may seem like a minor variation on the contrastive methods we saw previously, but it\u2019s a change that opens up a lot of new possibilities. CLIP connects the domain of images to the domain of language. This means that many of the powerful abilities of language become applicable to imagery as well. One ability\u2026\n\n7: Making custom classifiers using CLIP. (a) Image embeddings in joint embedding space, (b) triangle-circle classifier, (c) purple-teal classifier, and (d) arrowhead-ball classifier. It\u2019s a bit like a modern astrolabe where you turn dials to read off the prediction of interest. CLIP Paper Edit this page View source Report an issue",
+            "source": "chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"CLIP\"",
+            "target": "\"USES INSPIRATION FROM\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP\"",
+            "target": "\"COMPUTER VISION APPLICATIONS\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP\"",
+            "target": "\"RADFORD2021LEARNING\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP\"",
+            "target": "\"CONTRASTIVE LEARNING\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP\"",
+            "target": "\"MAKING CUSTOM CLASSIFIERS USING CLIP\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP\"",
+            "target": "\"CLASS $A$ \"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-0a08d89c1355e1c044e0e440a79726b5<SEP>chunk-7cce828183eb520facdf138e8990dad6<SEP>chunk-b25dc470d4dceaa95b3e0266dadabbd0<SEP>chunk-3c385930ab22525d66741119eb336bad<SEP>chunk-5273cb005fffc8022b95c78d6c1df10d<SEP>chunk-01d17cfe5c23b5c3533930eea1c2f5b1<SEP>chunk-fcaf73a46ba5dd7357de0848204c3c3f<SEP>chunk-b51c9e3439fc588a037c55333c86c6cf<SEP>chunk-9327f35cd830b1b6c7918142ce95da94<SEP>chunk-6c85be8710612842ec863979cc7071a9",
+            "target": "\"CLIP\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"CLIP MODEL\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"The CLIP model trained with f_t and f_\\ell encodes both text and images into a shared embedding space.\"",
+          "source_id": "chunk-f9c25475041383298d36cd42b4c4750c",
+          "clusters": "[{\"level\": 0, \"cluster\": 1}, {\"level\": 1, \"cluster\": 15}]"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"F_T\"",
+          "\"F_\\ELL\""
+        ],
+        "resources": [
+          "chunk::chunk-f9c25475041383298d36cd42b4c4750c"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"CLIP MODEL\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"The CLIP model trained with f_t and f_\\ell encodes both text and images into a shared embedding space.\"",
+            "source_id": "chunk-f9c25475041383298d36cd42b4c4750c",
+            "clusters": "[{\"level\": 0, \"cluster\": 1}, {\"level\": 1, \"cluster\": 15}]"
+          },
+          "\"F_T\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"This entity refers to a function that embeds sentences into z-vectors based on their content.\"<SEP>\"\\(f_t\\) is another function that outputs unit vectors, used in conjunction with \\(f_\\ell\\) for computing the objective.\"<SEP>\"f_t is a text encoder that maps to embeddings during the training process.\"",
+            "source_id": "chunk-f9c25475041383298d36cd42b4c4750c<SEP>chunk-6c85be8710612842ec863979cc7071a9<SEP>chunk-ae9f686391396c2ea9169db71653fcd9",
+            "clusters": "[{\"level\": 0, \"cluster\": 1}, {\"level\": 1, \"cluster\": 15}]"
+          },
+          "\"F_\\ELL\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"\\(f_\\ell\\) is a function that outputs unit vectors, used in computing the objective with \\(L_2\\)-normalization.\"<SEP>\"f_\\ell is an image encoder that also maps to embeddings during the training process.\"",
+            "source_id": "chunk-f9c25475041383298d36cd42b4c4750c<SEP>chunk-6c85be8710612842ec863979cc7071a9",
+            "clusters": "[{\"level\": 0, \"cluster\": 1}, {\"level\": 1, \"cluster\": 15}]"
+          },
+          "chunk::chunk-f9c25475041383298d36cd42b4c4750c": {
+            "title": "source snippet for CLIP MODEL",
+            "text": "all other possible pairings within the batch. Inspired by figure 1 of \\cite{radford2021learning After training, we have a text encoder \\(f_t\\) and an image encoder \\(f_\\ell\\) that map to the same embedding space. In this space, the angle between a text embedding and an image embedding will be small if the text matches the matches. The dot product between unit vectors is proportional to the angle\u2026",
+            "source": "chunk-f9c25475041383298d36cd42b4c4750c"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"CLIP MODEL\"",
+            "target": "\"F_T\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"CLIP MODEL\"",
+            "target": "\"F_\\ELL\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-f9c25475041383298d36cd42b4c4750c",
+            "target": "\"CLIP MODEL\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "question_number": 1,
+  "question": "What is attention in transformers and can you provide a python example of how it is used ?",
+  "result": {
+    "answer": "**Answer:**\n\nAttention in Transformers refers to the mechanism by which these models compute weighted representations of input sequences. Unlike traditional Recurrent Neural Networks (RNNs), which process input sequences sequentially, Transformers use self-attention mechanisms that allow them to consider all parts of the sequence simultaneously during computation.\n\nThe scaled dot-product attention mechanism is a common form used in Transformers. It computes attention between each pair of query (`Q`) and key (`K`) vectors by calculating their similarity score using a dot product (scaled with a temperature factor `d_k`), followed by applying a softmax function to obtain the weights that represent the importance of different parts of the input sequence.\n\nHere's an example in Python demonstrating how scaled dot-product self-attention is computed for a single head:\n\n```python\nimport numpy as np\n\n# Example input sequences, queries and keys\nQ = np.array([[1], [2], [3]])\nK = np.array([[4], [5], [6]])\n\n# Dot product similarity score (scaled by sqrt(d_k))\nsimilarity_score = Q @ K.T / np.sqrt(Q.shape[1])\n\n# Applying softmax to get attention weights\nattention_weights = np.exp(similarity_score) / sum(np.exp(similarity_score))\n\nprint(attention_weights)\n```\n\nIn this example, `Q` and `K` represent a sequence of queries (`Q`) and keys (`K`). The similarity scores are calculated by taking the dot product between them and scaling it by `sqrt(d_k)` where `d_k` is typically equal to `1`. Softmax function normalizes these scores into probabilities that indicate the importance of each query/key pair, with higher values assigned to more relevant elements.\n\nWhen using Transformers libraries like Hugging Face's `transformers`, you can visualize attention weights through visualizers such as `bertviz`. Below is an example showcasing how to generate a visualization for scaled dot-product self-attention:\n\n```python\nfrom bertviz import head_view\nfrom transformers import AutoModel\n\nmodel = AutoModel.from_pretrained(\"bert-base-uncased\")  # Initialize the model with your required configuration\n\n# Provide input_ids, attention_mask and token_type_ids according to your use-case\ninput_ids = np.array([101, 2368, 4795, 1299, 5855])\nattention_mask = np.array([1, 1, 1, 1, 1])\ntoken_type_ids = np.array([0, 0, 0, 0, 0])\n\n# Pass input and configuration to the model for attention computation\noutputs = model(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)\n\n# Extract output attentions of shape (batch_size, num_heads, seq_len, seq_len)\nattentions = outputs[1]\n\n# Plot visualization using bertviz library\nhead_view(attentions[:, 0], input_ids.tolist())\n```\n\nThe knowledge graph nodes used in this explanation are:\n\n- **BERTVIZ**: Used for visualizing attention mechanisms in Transformers models.\n- **TRANSFORMERS AND SELF-ATTENTION**: Explain the use of self-attention mechanisms instead of RNNs in Transformers architectures.\n- **TRANSFORMER MODEL**: Describes a type of machine learning model that processes input sequences, used to compute attention in NLP tasks.\n- **TRANSFORMERS**: Mentioned as pre-trained deep learning models designed for natural language processing tasks.\n\n**Practice Questions:**\n1. Given the input sequence `[2, 3, 4]` and two query vectors `Q = [5, 6, 7]` and `K = [8, 9, 10]`, compute the similarity scores using dot product followed by softmax normalization.\n2. Explain how to visualize attention weights in a Transformer model using the bertviz library provided you have input data such as `input_ids`.",
+    "used_concepts": [
+      "\"BERTVIZ\"",
+      "\"TRANSFORMERS AND SELF-ATTENTION\"",
+      "\"TRANSFORMER MODEL\"",
+      "\"TRANSFORMERS\"",
+      "\"VISION TRANSFORMER\""
+    ],
+    "references": [
+      {
+        "concept": "BERTVIZ",
+        "evidence": "is for example very small, this is purely due to the specific data being present at that moment. Example An example of the output of the scaled dot-product self-attention is shown below using the bertviz library. from bertviz import head_view from transformers import AutoModel model = AutoModel.from_pretrained(model_ckpt, output_attentions = True\u2026"
+      },
+      {
+        "concept": "TRANSFORMERS AND SELF-ATTENTION",
+        "evidence": "Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language Models RNN Language Models Example of an RNN Language Model RNN-based Neural Machine Translation Character-level recurrent sequence-to-sequence model The BLEU Score Attention in RNN-based NMT\u2026"
+      },
+      {
+        "concept": "TRANSFORMER MODEL",
+        "evidence": "vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What is CLIP and how it is used in computer vision applications ? We expect to see a response that explains encoders for text and image, the principle of contrastive loss, the dot product operation and how one-shot classification\u2026"
+      },
+      {
+        "concept": "TRANSFORMERS",
+        "evidence": "is for example very small, this is purely due to the specific data being present at that moment. Example An example of the output of the scaled dot-product self-attention is shown below using the bertviz library. from bertviz import head_view from transformers import AutoModel model = AutoModel.from_pretrained(model_ckpt, output_attentions = True\u2026"
+      },
+      {
+        "concept": "VISION TRANSFORMER",
+        "evidence": "Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On\u2026"
+      }
+    ],
+    "subgraphs": [
+      {
+        "concept_id": "\"BERTVIZ\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"bertviz is a visualization library that can be used with transformers models, specifically for visualizing attention mechanisms.\"",
+          "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"AUTOMODEL\"",
+          "\"TRANSFORMERS\""
+        ],
+        "resources": [
+          "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"BERTVIZ\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"bertviz is a visualization library that can be used with transformers models, specifically for visualizing attention mechanisms.\"",
+            "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+          },
+          "\"AUTOMODEL\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"AutoModel is a library used to create and train transformer models for natural language processing tasks.\"",
+            "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+          },
+          "\"TRANSFORMERS\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Transformers are a type of model used in deep learning for natural language processing tasks.\"<SEP>\"transformers are pre-trained deep learning models designed to work in a wide range of natural language processing tasks.\"",
+            "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          },
+          "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3": {
+            "title": "source snippet for BERTVIZ",
+            "text": "is for example very small, this is purely due to the specific data being present at that moment. Example An example of the output of the scaled dot-product self-attention is shown below using the bertviz library. from bertviz import head_view from transformers import AutoModel model = AutoModel.from_pretrained(model_ckpt, output_attentions = True ) sentence_a = \"time flies like an arrow\"\u2026",
+            "source": "chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"BERTVIZ\"",
+            "target": "\"AUTOMODEL\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"BERTVIZ\"",
+            "target": "\"TRANSFORMERS\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3",
+            "target": "\"BERTVIZ\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"TRANSFORMERS AND SELF-ATTENTION\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"Transformers are neural network architectures that use self-attention mechanisms instead of recurrent layers, making them faster for sequence-to-sequence tasks.\"<SEP>\"Transformers use self-attention mechanisms instead of RNNs for sequence-to-sequence tasks\"",
+          "source_id": "chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"MULTI-HEAD SELF-ATTENTION\""
+        ],
+        "resources": [
+          "chunk::chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"TRANSFORMERS AND SELF-ATTENTION\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Transformers are neural network architectures that use self-attention mechanisms instead of recurrent layers, making them faster for sequence-to-sequence tasks.\"<SEP>\"Transformers use self-attention mechanisms instead of RNNs for sequence-to-sequence tasks\"",
+            "source_id": "chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219"
+          },
+          "\"MULTI-HEAD SELF-ATTENTION\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Combines multiple single-head attentions to weigh different contexts effectively\"<SEP>\"Multi-head self-attention uses multiple heads in parallel to process different aspects of the input data, enhancing computational efficiency and representational power.\"<SEP>\"Multi-head self-attention is an extension of self-attention that uses multiple parallel attention mechanisms to improve model performance.\"",
+            "source_id": "chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          },
+          "chunk::chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219": {
+            "title": "source snippet for TRANSFORMERS AND SELF-ATTENTION",
+            "text": "Introduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language Models RNN Language Models Example of an RNN Language Model RNN-based Neural Machine Translation Character-level recurrent sequence-to-sequence model The BLEU Score Attention in RNN-based NMT Transformers and Self-Attention Single-head self-attention\u2026\n\nIntroduction to Recurrent Neural Networks (RNN) Simple RNN Time Series Prediction using RNNs The Long Short-Term Memory (LSTM) Architecture Language Models RNN Language Models Example of an RNN Language Model RNN-based Neural Machine Translation Character-level recurrent sequence-to-sequence model The BLEU Score Attention in RNN-based NMT Transformers and Self-Attention Single-head self-attention\u2026",
+            "source": "chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"TRANSFORMERS AND SELF-ATTENTION\"",
+            "target": "\"MULTI-HEAD SELF-ATTENTION\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-023c8b67da94a3b9edf077fa3025ccbf<SEP>chunk-db09b94e4d3bf6b9793eca0b3d3ef219",
+            "target": "\"TRANSFORMERS AND SELF-ATTENTION\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"TRANSFORMER MODEL\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"A type of machine learning model that processes input sequences, such as text or speech. It is used to compute attention in natural language processing tasks.\"",
+          "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"ATTENTION\""
+        ],
+        "resources": [
+          "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"TRANSFORMER MODEL\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"A type of machine learning model that processes input sequences, such as text or speech. It is used to compute attention in natural language processing tasks.\"",
+            "source_id": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+          },
+          "\"ATTENTION\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Attention refers to a mechanism used in neural networks for focusing on specific parts of input data when making predictions or decisions.\"",
+            "source_id": "chunk-9691570c00acdd0fdc4be33481f76c10"
+          },
+          "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1": {
+            "title": "source snippet for TRANSFORMER MODEL",
+            "text": "vectors are needed and a code snippet that illustrates how attention is computed in a transformer model. Question 2: What is CLIP and how it is used in computer vision applications ? We expect to see a response that explains encoders for text and image, the principle of contrastive loss, the dot product operation and how one-shot classification can be achieved with CLIP . Question 3: Can you\u2026",
+            "source": "chunk-01d17cfe5c23b5c3533930eea1c2f5b1"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"TRANSFORMER MODEL\"",
+            "target": "\"ATTENTION\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-01d17cfe5c23b5c3533930eea1c2f5b1",
+            "target": "\"TRANSFORMER MODEL\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"TRANSFORMERS\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"Transformers are a type of model used in deep learning for natural language processing tasks.\"<SEP>\"transformers are pre-trained deep learning models designed to work in a wide range of natural language processing tasks.\"",
+          "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"BERTVIZ\"",
+          "\"SELF-ATTENTION\""
+        ],
+        "resources": [
+          "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"TRANSFORMERS\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Transformers are a type of model used in deep learning for natural language processing tasks.\"<SEP>\"transformers are pre-trained deep learning models designed to work in a wide range of natural language processing tasks.\"",
+            "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          },
+          "\"BERTVIZ\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"bertviz is a visualization library that can be used with transformers models, specifically for visualizing attention mechanisms.\"",
+            "source_id": "chunk-c99c24e98baaaa5f4dd12a27d70829e3"
+          },
+          "\"SELF-ATTENTION\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"Self-attention mechanism allows models to weigh the importance of different input elements when generating output.\"",
+            "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          },
+          "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5": {
+            "title": "source snippet for TRANSFORMERS",
+            "text": "is for example very small, this is purely due to the specific data being present at that moment. Example An example of the output of the scaled dot-product self-attention is shown below using the bertviz library. from bertviz import head_view from transformers import AutoModel model = AutoModel.from_pretrained(model_ckpt, output_attentions = True ) sentence_a = \"time flies like an arrow\"\u2026\n\nModels Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On this page Self-supervised Learning Contrastive\u2026",
+            "source": "chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"TRANSFORMERS\"",
+            "target": "\"BERTVIZ\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"TRANSFORMERS\"",
+            "target": "\"SELF-ATTENTION\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-c99c24e98baaaa5f4dd12a27d70829e3<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5",
+            "target": "\"TRANSFORMERS\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      },
+      {
+        "concept_id": "\"VISION TRANSFORMER\"",
+        "concept_meta": {
+          "entity_type": "\"ORGANIZATION\"",
+          "description": "\"The Vision Transformer paper introduces a novel method for computer vision tasks using transformers.\"<SEP>\"Vision Transformer is a type of transformer architecture specifically designed for computer vision tasks, replacing traditional convolutional neural networks with self-attention mechanisms.\"",
+          "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94",
+          "clusters": "[{\"level\": 0, \"cluster\": 9}]"
+        },
+        "prereqs": [],
+        "siblings": [
+          "\"MULTIMODAL REASONING\"",
+          "\"BATCH NORMALIZATION\"",
+          "\"LAYER NORMALIZATION (LN)\"",
+          "\"SELF-SUPERVISED LEARNING\""
+        ],
+        "resources": [
+          "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94"
+        ],
+        "examples": [],
+        "nodes": {
+          "\"VISION TRANSFORMER\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"The Vision Transformer paper introduces a novel method for computer vision tasks using transformers.\"<SEP>\"Vision Transformer is a type of transformer architecture specifically designed for computer vision tasks, replacing traditional convolutional neural networks with self-attention mechanisms.\"",
+            "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94",
+            "clusters": "[{\"level\": 0, \"cluster\": 9}]"
+          },
+          "\"MULTIMODAL REASONING\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"Multimodal Reasoning involves understanding and processing information from multiple data types or modalities.\"<SEP>\"Multimodal Reasoning is the concept that refers to processing and integrating information from multiple sensory modalities (visual, auditory, text etc.) by AI systems to improve decision-making capabilities.\"<SEP>\"Multimodal reasoning involves integrating data from multiple sources to make decisions or predictions, which is part of the advanced capabilities offered by Engineering AI Agents.\"<SEP>\"Multimodal reasoning involves the integration of information from multiple modalities (e.g., text, images) to solve complex problems or make decisions.\"<SEP>\"The process of combining information from multiple data sources or modalities to solve complex problems or make decisions.\"",
+            "source_id": "chunk-99819c35bbf0101274afb02fb3b32d83<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-84dfa8f7659e18c804b71f45f6515bda<SEP>chunk-8918faedca791dce8442c2842ed51792<SEP>chunk-9327f35cd830b1b6c7918142ce95da94",
+            "clusters": "[{\"level\": 0, \"cluster\": 2}, {\"level\": 1, \"cluster\": 18}, {\"level\": 2, \"cluster\": 56}]"
+          },
+          "\"BATCH NORMALIZATION\"": {
+            "entity_type": "\"CONCEPT\"",
+            "description": "\"Batch normalization is a technique that normalizes input data in neural networks during training, stabilizing learning and improving performance.\"",
+            "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5",
+            "clusters": "[{\"level\": 0, \"cluster\": 9}]"
+          },
+          "\"LAYER NORMALIZATION (LN)\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Layer normalization adjusts the scale and shift of activations within specific layers across multiple batches, aiding model stability and efficiency.\"",
+            "source_id": "chunk-c87cd3d29a0304bd90833bfc5ea711a5",
+            "clusters": "[{\"level\": 0, \"cluster\": 9}]"
+          },
+          "\"SELF-SUPERVISED LEARNING\"": {
+            "entity_type": "\"ORGANIZATION\"",
+            "description": "\"Self-supervised Learning is a methodology for learning representations under the condition of data self-supervision.\"<SEP>\"Self-supervised learning involves training models on large datasets without explicit labels, relying on pretext tasks to learn representations.\"",
+            "source_id": "chunk-9ae681fbd13cfbe89e3fda7d1e7f5a79<SEP>chunk-c87cd3d29a0304bd90833bfc5ea711a5",
+            "clusters": "[{\"level\": 0, \"cluster\": 9}]"
+          },
+          "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94": {
+            "title": "source snippet for VISION TRANSFORMER",
+            "text": "Models Transformers and Self-Attention Single-head self-attention Multi-head self-attention Positional Embeddings Batch Normalization Layer Normalization (LN) Vision Transformer Paper Vision Transformer (ViT) in PyTorch Contrastive Language-Image Pretraining (CLIP) CLIP Paper BLIP-2 BLIP-2 Paper Visual Instruction Tuning - LlaVa LLaVa Paper On this page Self-supervised Learning Contrastive\u2026\n\nContrastive Language-Image Pretraining (CLIP) \u2013 Engineering AI Agents Engineering AI Agents BOOK Foundations Training Deep Networks Perception Kinematics State Estimation Large Language Models Multimodal Reasoning Task Planning Global Planning Local Planning Markov Decision Processes Reinforcement Learning VLA Agents COURSES Introduction to AI AI for Robotics Deep Learning for Computer Vision\u2026",
+            "source": "chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94"
+          }
+        },
+        "edges": [
+          {
+            "source": "\"VISION TRANSFORMER\"",
+            "target": "\"MULTIMODAL REASONING\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"VISION TRANSFORMER\"",
+            "target": "\"BATCH NORMALIZATION\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"VISION TRANSFORMER\"",
+            "target": "\"LAYER NORMALIZATION (LN)\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "\"VISION TRANSFORMER\"",
+            "target": "\"SELF-SUPERVISED LEARNING\"",
+            "type": "neighbor"
+          },
+          {
+            "source": "chunk::chunk-c87cd3d29a0304bd90833bfc5ea711a5<SEP>chunk-9327f35cd830b1b6c7918142ce95da94",
+            "target": "\"VISION TRANSFORMER\"",
+            "type": "explains (chunk-snippet)"
+          }
+        ]
+      }
+    ]
+  }
+}
