@@ -3,6 +3,8 @@
 Name: Shashwat Roy <br>
 NetID: sr7988
 
+This is a course assignments repository. To view the GraphRAG project navigate to /project
+
 ## What is this repository?
 
 This is a template docker-based dev environment. It currently supports NVIDIA GPUs but with slight modifications it can target for x86 CPUs and Apple silicon chips. 
